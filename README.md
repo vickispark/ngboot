@@ -1,2 +1,1 @@
-# ngboot
-Angular with SpringBoot
+# infboot
