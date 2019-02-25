@@ -10,3 +10,18 @@ buildNumber.properties
 
 # Avoid ignoring Maven wrapper jar file (.jar files are usually ignored)
 !/.mvn/wrapper/maven-wrapper.jar
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+.DS_Store
+/src/.DS_Store
+/src/main/.DS_Store
+/src/main/resources/.DS_Store
+/src/main/webapp/.DS_Store
