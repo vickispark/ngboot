@@ -1,0 +1,9 @@
+<h2>Car List</h2>
+
+      <div *ngFor="let car of cars">
+        <h3>
+          <a [routerLink]="['/car-edit', car.id]">{{car.name}}</a>
+        </h3>
+      </div>
+   
+  <button  [routerLink]="['/car-add']">Add</button>

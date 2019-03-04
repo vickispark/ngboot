@@ -1,5 +1,8 @@
 package com.vic.spr.service;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -26,4 +29,13 @@ public class RegistrationService {
 		userEntity.setUserId(user.getUserId());
 		userRepository.saveAndFlush(userEntity);		
 	}
+	
+	 public List<UserEntity> getAllUsers() {				
+			 List<UserEntity> usr = new ArrayList<>()	;
+			
+			 userRepository.findAll().forEach(usr::add);
+			
+			 return usr;//response as json
+			  }
+
 }
