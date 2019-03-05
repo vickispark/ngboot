@@ -9,6 +9,7 @@ export class HardcodedAuthenticationService {
 
   authenticate(username, password) {
     //console.log('before ' + this.isUserLoggedIn());
+   // sessionStorage.setItem('authenticaterUser', 'vivek');
     if(username==="in28minutes" && password === 'dummy') {
       sessionStorage.setItem('authenticaterUser', username);
       //console.log('after ' + this.isUserLoggedIn());
@@ -18,8 +19,9 @@ export class HardcodedAuthenticationService {
   }
 
   isUserLoggedIn() {
-    let user = sessionStorage.getItem('authenticaterUser')
-    return !(user === null)
+    return true;
+    //let user = sessionStorage.getItem('authenticaterUser')
+    //return !(user === null)
   }
 
   logout(){
