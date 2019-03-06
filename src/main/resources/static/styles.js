@@ -7,7 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = [[module.i, "\n@import url(https://unpkg.com/bootstrap@4.1.0/dist/css/bootstrap.min.css)\n/* You can add global styles to this file, and also import other style files */\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9zdHlsZXMuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFDQSx3RUFBd0U7QUFEeEUsOEVBQThFIiwiZmlsZSI6InNyYy9zdHlsZXMuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLyogWW91IGNhbiBhZGQgZ2xvYmFsIHN0eWxlcyB0byB0aGlzIGZpbGUsIGFuZCBhbHNvIGltcG9ydCBvdGhlciBzdHlsZSBmaWxlcyAqL1xuQGltcG9ydCB1cmwoaHR0cHM6Ly91bnBrZy5jb20vYm9vdHN0cmFwQDQuMS4wL2Rpc3QvY3NzL2Jvb3RzdHJhcC5taW4uY3NzKVxuIl19 */", '', '']]
+module.exports = [[module.i, "\r\n@import url(https://unpkg.com/bootstrap@4.1.0/dist/css/bootstrap.min.css)\n/* You can add global styles to this file, and also import other style files */\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9zdHlsZXMuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFDQSx3RUFBd0U7QUFEeEUsOEVBQThFIiwiZmlsZSI6InNyYy9zdHlsZXMuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLyogWW91IGNhbiBhZGQgZ2xvYmFsIHN0eWxlcyB0byB0aGlzIGZpbGUsIGFuZCBhbHNvIGltcG9ydCBvdGhlciBzdHlsZSBmaWxlcyAqL1xyXG5AaW1wb3J0IHVybChodHRwczovL3VucGtnLmNvbS9ib290c3RyYXBANC4xLjAvZGlzdC9jc3MvYm9vdHN0cmFwLm1pbi5jc3MpXHJcbiJdfQ== */", '', '']]
 
 /***/ }),
 
@@ -557,7 +557,7 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/vickispark/Desktop/GitRepo/ngboot/aglr-app/src/styles.css */"./src/styles.css");
+module.exports = __webpack_require__(/*! C:\Users\vivek_pathi\Desktop\git\ngboot\aglr-app\src\styles.css */"./src/styles.css");
 
 
 /***/ })

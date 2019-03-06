@@ -117,7 +117,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n\n<app-menu></app-menu>\n\n<div class=\"container\">\n    <router-outlet></router-outlet>\n</div>\n\n\n\n<!-- <app-car-list></app-car-list> -->\n\n<app-footer></app-footer>\n\n<!--The content below is only a placeholder and can be replaced.-->\n<div style=\"text-align:center\">\n  <h1>\n    Welcome to {{ title }}!\n  </h1>\n  <img width=\"300\" alt=\"Angular Logo\" src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==\">\n</div>\n<h2>Here are some links to help you start: </h2>\n<ul>\n  <li><h2><a target=\"_blank\" rel=\"noopener\" href=\"https://angular.io/tutorial\">Tour of Heroes</a></h2></li>\n  <li><h2><a target=\"_blank\" rel=\"noopener\" href=\"https://angular.io/cli\">CLI Documentation</a></h2></li>\n  <li><h2><a target=\"_blank\" rel=\"noopener\" href=\"https://blog.angular.io/\">Angular blog</a></h2></li>\n</ul>\n"
+module.exports = "\r\n\r\n<app-menu></app-menu>\r\n\r\n<div class=\"container\">\r\n    <router-outlet></router-outlet>\r\n</div>\r\n\r\n\r\n\r\n<!-- <app-car-list></app-car-list> -->\r\n\r\n<app-footer></app-footer>\r\n\r\n<!--The content below is only a placeholder and can be replaced.-->\r\n<div style=\"text-align:center\">\r\n  <h1>\r\n    Welcome to {{ title }}!\r\n  </h1>\r\n  <img width=\"300\" alt=\"Angular Logo\" src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==\">\r\n</div>\r\n<h2>Here are some links to help you start: </h2>\r\n<ul>\r\n  <li><h2><a target=\"_blank\" rel=\"noopener\" href=\"https://angular.io/tutorial\">Tour of Heroes</a></h2></li>\r\n  <li><h2><a target=\"_blank\" rel=\"noopener\" href=\"https://angular.io/cli\">CLI Documentation</a></h2></li>\r\n  <li><h2><a target=\"_blank\" rel=\"noopener\" href=\"https://blog.angular.io/\">Angular blog</a></h2></li>\r\n</ul>\r\n"
 
 /***/ }),
 
@@ -273,7 +273,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "  <form #carForm=\"ngForm\" (ngSubmit)=\"save(carForm.value)\">\n      <h2>{{car.name ? 'Edit' : 'Add'}} Car</h2>\n      <input type=\"hidden\" name=\"href\" [(ngModel)]=\"car.href\">\n        <input  placeholder=\"Car Name\" [(ngModel)]=\"car.name\"\n               required name=\"name\" #name>\n      <button color=\"primary\" type=\"submit\"\n              [disabled]=\"!carForm.form.valid\">Save</button>\n      <button  color=\"secondary\" (click)=\"remove(car.href)\"\n              *ngIf=\"car.href\" type=\"button\">Delete</button>\n      <a routerLink=\"/car-list\">Cancel</a>\n      <!-- <div class=\"giphy\">\n        <img src=\"{{car.giphyUrl}}\" alt=\"{{car.name}}\">\n      </div> -->\n  </form>\n"
+module.exports = "  <form #carForm=\"ngForm\" (ngSubmit)=\"save(carForm.value)\">\r\n      <h2>{{car.name ? 'Edit' : 'Add'}} Car</h2>\r\n      <input type=\"hidden\" name=\"href\" [(ngModel)]=\"car.href\">\r\n        <input  placeholder=\"Car Name\" [(ngModel)]=\"car.name\"\r\n               required name=\"name\" #name>\r\n      <button color=\"primary\" type=\"submit\"\r\n              [disabled]=\"!carForm.form.valid\">Save</button>\r\n      <button  color=\"secondary\" (click)=\"remove(car.href)\"\r\n              *ngIf=\"car.href\" type=\"button\">Delete</button>\r\n      <a routerLink=\"/car-list\">Cancel</a>\r\n      <!-- <div class=\"giphy\">\r\n        <img src=\"{{car.giphyUrl}}\" alt=\"{{car.name}}\">\r\n      </div> -->\r\n  </form>\r\n"
 
 /***/ }),
 
@@ -378,7 +378,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h2>Car List</h2>\n\n      <div *ngFor=\"let car of cars\">\n        <h3>\n          <a [routerLink]=\"['/car-edit', car.id]\">{{car.name}}</a>\n        </h3>\n      </div>\n   \n  <button  [routerLink]=\"['/car-add']\">Add</button>\n"
+module.exports = "<h2>Car List</h2>\r\n\r\n      <div *ngFor=\"let car of cars\">\r\n        <h3>\r\n          <a [routerLink]=\"['/car-edit', car.id]\">{{car.name}}</a>\r\n        </h3>\r\n      </div>\r\n   \r\n  <button  [routerLink]=\"['/car-add']\">Add</button>\r\n"
 
 /***/ }),
 
@@ -487,7 +487,7 @@ var ErrorComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".footer {\n    position: relative;\n    bottom: 0;\n    width:100%;\nheight: 40px;\n    background-color: #222222;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZm9vdGVyL2Zvb3Rlci5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksa0JBQWtCO0lBQ2xCLFNBQVM7SUFDVCxVQUFVO0FBQ2QsWUFBWTtJQUNSLHlCQUF5QjtBQUM3QiIsImZpbGUiOiJzcmMvYXBwL2Zvb3Rlci9mb290ZXIuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5mb290ZXIge1xuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgICBib3R0b206IDA7XG4gICAgd2lkdGg6MTAwJTtcbmhlaWdodDogNDBweDtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjMjIyMjIyO1xufSJdfQ== */"
+module.exports = ".footer {\r\n    position: relative;\r\n    bottom: 0;\r\n    width:100%;\r\nheight: 40px;\r\n    background-color: #222222;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZm9vdGVyL2Zvb3Rlci5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksa0JBQWtCO0lBQ2xCLFNBQVM7SUFDVCxVQUFVO0FBQ2QsWUFBWTtJQUNSLHlCQUF5QjtBQUM3QiIsImZpbGUiOiJzcmMvYXBwL2Zvb3Rlci9mb290ZXIuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5mb290ZXIge1xyXG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xyXG4gICAgYm90dG9tOiAwO1xyXG4gICAgd2lkdGg6MTAwJTtcclxuaGVpZ2h0OiA0MHB4O1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogIzIyMjIyMjtcclxufSJdfQ== */"
 
 /***/ }),
 
@@ -498,7 +498,7 @@ module.exports = ".footer {\n    position: relative;\n    bottom: 0;\n    width:
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<footer class=\"footer\">\n    <div class=\"container\">\n        <span class=\"text-muted\">All Rights Reserved @Company</span>\n    </div>\n\n</footer>"
+module.exports = "<footer class=\"footer\">\r\n    <div class=\"container\">\r\n        <span class=\"text-muted\">All Rights Reserved @Company</span>\r\n    </div>\r\n\r\n</footer>"
 
 /***/ }),
 
@@ -554,7 +554,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h1> Todo </h1>\n\n<div class=\"alert alert-success\" *ngIf='message'>{{message}}</div>\n\n<div class=\"container\">\n  <table class=\"table\">\n    <thead>\n      <tr>\n        <th>Description</th>\n        <th>Target Date</th>\n        <th>is Completed?</th>\n        <th>Update</th>\n        <th>Delete</th>\n      </tr>\n    </thead>\n    <tbody>\n      <!--   for (Todo todo: todos) {  -->\n              <tr *ngFor=\"let todo of todos\">\n                <td>{{todo.description}}</td>\n                <td>{{todo.targetDate | date | uppercase}}</td>\n                <td>{{todo.done}}</td>\n                <td><button (click)=\"updateTodo(todo.id)\" class=\"btn btn-success\">Update</button></td>\n                <td><button (click)=\"deleteTodo(todo.id)\" class=\"btn btn-warning\">Delete</button></td>\n              </tr>\n      <!-- } -->\n    </tbody>\n\n  </table>\n\n  <div class=\"row\">\n      <button (click)=\"addTodo()\" class=\"btn btn-success\">Add</button>\n  </div>\n\n</div>"
+module.exports = "<h1> Todo </h1>\r\n\r\n<div class=\"alert alert-success\" *ngIf='message'>{{message}}</div>\r\n\r\n<div class=\"container\">\r\n  <table class=\"table\">\r\n    <thead>\r\n      <tr>\r\n        <th>Description</th>\r\n        <th>Target Date</th>\r\n        <th>is Completed?</th>\r\n        <th>Update</th>\r\n        <th>Delete</th>\r\n      </tr>\r\n    </thead>\r\n    <tbody>\r\n      <!--   for (Todo todo: todos) {  -->\r\n              <tr *ngFor=\"let todo of todos\">\r\n                <td>{{todo.description}}</td>\r\n                <td>{{todo.targetDate | date | uppercase}}</td>\r\n                <td>{{todo.done}}</td>\r\n                <td><button (click)=\"updateTodo(todo.id)\" class=\"btn btn-success\">Update</button></td>\r\n                <td><button (click)=\"deleteTodo(todo.id)\" class=\"btn btn-warning\">Delete</button></td>\r\n              </tr>\r\n      <!-- } -->\r\n    </tbody>\r\n\r\n  </table>\r\n\r\n  <div class=\"row\">\r\n      <button (click)=\"addTodo()\" class=\"btn btn-success\">Add</button>\r\n  </div>\r\n\r\n</div>"
 
 /***/ }),
 
@@ -664,7 +664,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<H1>Login!</H1>\n\n<div class=\"container\">\n  <div class=\"alert alert-warning\" *ngIf='invalidLogin'>{{errorMessage}}</div>\n\n  <div>\n    User Name : <input type=\"text\" name=\"username\" [(ngModel)]=\"username\">\n    Password  : <input type=\"password\" name=\"password\" [(ngModel)]=\"password\">\n\n    <!-- User Name : {{username}} -->\n\n    <!-- <button (click)=handleLogin() class=\"btn btn-success\">Login</button> -->\n    <!-- <button (click)=handleBasicAuthLogin() class=\"btn btn-success\">Login</button> -->\n    <button (click)=handleJWTAuthLogin() class=\"btn btn-success\">Login</button>\n    \n  </div>\n</div>"
+module.exports = "<H1>Login!</H1>\r\n\r\n<div class=\"container\">\r\n  <div class=\"alert alert-warning\" *ngIf='invalidLogin'>{{errorMessage}}</div>\r\n\r\n  <div>\r\n    User Name : <input type=\"text\" name=\"username\" [(ngModel)]=\"username\">\r\n    Password  : <input type=\"password\" name=\"password\" [(ngModel)]=\"password\">\r\n\r\n    <!-- User Name : {{username}} -->\r\n\r\n    <!-- <button (click)=handleLogin() class=\"btn btn-success\">Login</button> -->\r\n    <!-- <button (click)=handleBasicAuthLogin() class=\"btn btn-success\">Login</button> -->\r\n    <button (click)=handleJWTAuthLogin() class=\"btn btn-success\">Login</button>\r\n    \r\n  </div>\r\n</div>"
 
 /***/ }),
 
@@ -776,7 +776,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<H1>You are logged out</H1>\n<div class=\"container\">\n  Thank You For Using Our Application.\n</div>"
+module.exports = "<H1>You are logged out</H1>\r\n<div class=\"container\">\r\n  Thank You For Using Our Application.\r\n</div>"
 
 /***/ }),
 
@@ -836,7 +836,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<header>\n    <nav class=\"navbar navbar-expand-md navbar-dark bg-dark\">\n        <div><a href=\"/\" class=\"navbar-brand\">\n            ngBoot</a></div>\n\n        <ul class=\"navbar-nav\">\n            <li><a *ngIf=\"hardcodedAuthenticationService.isUserLoggedIn()\" routerLink=\"/welcome/ngBoot\" class=\"nav-link\">Home</a></li>\n            <li><a *ngIf=\"hardcodedAuthenticationService.isUserLoggedIn()\" routerLink=\"/todos\" class=\"nav-link\">Todos</a></li>\n        </ul>\n\n        <ul class=\"navbar-nav navbar-collapse justify-content-end\">\n                <li><a *ngIf=\"!hardcodedAuthenticationService.isUserLoggedIn()\" routerLink=\"/login\" class=\"nav-link\">Login</a></li>\n                <li><a *ngIf=\"hardcodedAuthenticationService.isUserLoggedIn()\" routerLink=\"/logout\" class=\"nav-link\">Logout</a></li>\n        </ul>\n    </nav>\n</header>"
+module.exports = "<header>\r\n    <nav class=\"navbar navbar-expand-md navbar-dark bg-dark\">\r\n        <div><a href=\"/\" class=\"navbar-brand\">\r\n            ngBoot</a></div>\r\n\r\n        <ul class=\"navbar-nav\">\r\n            <li><a *ngIf=\"hardcodedAuthenticationService.isUserLoggedIn()\" routerLink=\"/welcome/ngBoot\" class=\"nav-link\">Home</a></li>\r\n            <li><a *ngIf=\"hardcodedAuthenticationService.isUserLoggedIn()\" routerLink=\"/todos\" class=\"nav-link\">Todos</a></li>\r\n        </ul>\r\n\r\n        <ul class=\"navbar-nav navbar-collapse justify-content-end\">\r\n                <li><a *ngIf=\"!hardcodedAuthenticationService.isUserLoggedIn()\" routerLink=\"/login\" class=\"nav-link\">Login</a></li>\r\n                <li><a *ngIf=\"hardcodedAuthenticationService.isUserLoggedIn()\" routerLink=\"/logout\" class=\"nav-link\">Logout</a></li>\r\n        </ul>\r\n    </nav>\r\n</header>"
 
 /***/ }),
 
@@ -1090,6 +1090,7 @@ var HardcodedAuthenticationService = /** @class */ (function () {
     }
     HardcodedAuthenticationService.prototype.authenticate = function (username, password) {
         //console.log('before ' + this.isUserLoggedIn());
+        // sessionStorage.setItem('authenticaterUser', 'vivek');
         if (username === "in28minutes" && password === 'dummy') {
             sessionStorage.setItem('authenticaterUser', username);
             //console.log('after ' + this.isUserLoggedIn());
@@ -1098,8 +1099,9 @@ var HardcodedAuthenticationService = /** @class */ (function () {
         return false;
     };
     HardcodedAuthenticationService.prototype.isUserLoggedIn = function () {
-        var user = sessionStorage.getItem('authenticaterUser');
-        return !(user === null);
+        return true;
+        //let user = sessionStorage.getItem('authenticaterUser')
+        //return !(user === null)
     };
     HardcodedAuthenticationService.prototype.logout = function () {
         sessionStorage.removeItem('authenticaterUser');
@@ -1221,7 +1223,7 @@ var CarService = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".ng-invalid:not(form) {\n    border-left: 5px solid red;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvdG9kby90b2RvLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSwwQkFBMEI7QUFDOUIiLCJmaWxlIjoic3JjL2FwcC90b2RvL3RvZG8uY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5uZy1pbnZhbGlkOm5vdChmb3JtKSB7XG4gICAgYm9yZGVyLWxlZnQ6IDVweCBzb2xpZCByZWQ7XG59Il19 */"
+module.exports = ".ng-invalid:not(form) {\r\n    border-left: 5px solid red;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvdG9kby90b2RvLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSwwQkFBMEI7QUFDOUIiLCJmaWxlIjoic3JjL2FwcC90b2RvL3RvZG8uY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5uZy1pbnZhbGlkOm5vdChmb3JtKSB7XHJcbiAgICBib3JkZXItbGVmdDogNXB4IHNvbGlkIHJlZDtcclxufSJdfQ== */"
 
 /***/ }),
 
@@ -1232,7 +1234,7 @@ module.exports = ".ng-invalid:not(form) {\n    border-left: 5px solid red;\n}\n/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<H1>Todo</H1>\n\n<div class=\"container\">\n  <div class=\"alert alert-warning\" *ngIf=\"todoForm.dirty && todoForm.invalid\">Enter valid values</div>\n  <div class=\"alert alert-warning\" *ngIf=\"todoForm.dirty && targetDate.invalid\">Enter valid Target Date</div>\n  <div class=\"alert alert-warning\" *ngIf=\"todoForm.dirty && description.invalid\">Enter atleast 5 characters in Description</div>\n  \n  <form (ngSubmit)=\"!todoForm.invalid && saveTodo()\" #todoForm=\"ngForm\">\n    <fieldset class=\"form-group\">\n      <label>Description</label>\n      <input type=\"text\" #description=\"ngModel\" \n            [(ngModel)]=\"todo.description\" class=\"form-control\" \n                name=\"description\" required=\"required\" minlength=\"5\">\n    </fieldset>\n\n    <fieldset class=\"form-group\">\n        <label>Target Date</label>\n        <input type=\"date\" #targetDate=\"ngModel\"\n        [ngModel]=\"todo.targetDate | date:'yyyy-MM-dd' \"\n        (ngModelChange)=\"todo.targetDate = $event\"\n        class=\"form-control\" name=\"targetDate\" required=\"required\" >\n    </fieldset>\n\n    <button type=\"submit\" class=\"btn btn-success\">Save</button>\n  </form>  \n</div>"
+module.exports = "<H1>Todo</H1>\r\n\r\n<div class=\"container\">\r\n  <div class=\"alert alert-warning\" *ngIf=\"todoForm.dirty && todoForm.invalid\">Enter valid values</div>\r\n  <div class=\"alert alert-warning\" *ngIf=\"todoForm.dirty && targetDate.invalid\">Enter valid Target Date</div>\r\n  <div class=\"alert alert-warning\" *ngIf=\"todoForm.dirty && description.invalid\">Enter atleast 5 characters in Description</div>\r\n  \r\n  <form (ngSubmit)=\"!todoForm.invalid && saveTodo()\" #todoForm=\"ngForm\">\r\n    <fieldset class=\"form-group\">\r\n      <label>Description</label>\r\n      <input type=\"text\" #description=\"ngModel\" \r\n            [(ngModel)]=\"todo.description\" class=\"form-control\" \r\n                name=\"description\" required=\"required\" minlength=\"5\">\r\n    </fieldset>\r\n\r\n    <fieldset class=\"form-group\">\r\n        <label>Target Date</label>\r\n        <input type=\"date\" #targetDate=\"ngModel\"\r\n        [ngModel]=\"todo.targetDate | date:'yyyy-MM-dd' \"\r\n        (ngModelChange)=\"todo.targetDate = $event\"\r\n        class=\"form-control\" name=\"targetDate\" required=\"required\" >\r\n    </fieldset>\r\n\r\n    <button type=\"submit\" class=\"btn btn-success\">Save</button>\r\n  </form>  \r\n</div>"
 
 /***/ }),
 
@@ -1323,7 +1325,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<H1>Welcome!</H1>\n\n<div class=\"container\">\n  Welcome {{name}}. You can manage your todos <a routerLink=\"/todos\">here</a>\n</div>\n\n<div class=\"container\">\n  Click here to get a customized welcome message \n  <button (click)=\"getWelcomeMessageWithParameter()\" class=\"btn btn-success\">Get Welcome Message</button>\n</div>\n\n<div class=\"container\" *ngIf=\"welcomeMessageFromService\">\n    <H2>Your Customized Welcome Message</H2>\n    {{welcomeMessageFromService}}\n  </div>"
+module.exports = "<H1>Welcome!</H1>\r\n\r\n<div class=\"container\">\r\n  Welcome {{name}}. You can manage your todos <a routerLink=\"/todos\">here</a>\r\n</div>\r\n\r\n<div class=\"container\">\r\n  Click here to get a customized welcome message \r\n  <button (click)=\"getWelcomeMessageWithParameter()\" class=\"btn btn-success\">Get Welcome Message</button>\r\n</div>\r\n\r\n<div class=\"container\" *ngIf=\"welcomeMessageFromService\">\r\n    <H2>Your Customized Welcome Message</H2>\r\n    {{welcomeMessageFromService}}\r\n  </div>"
 
 /***/ }),
 
@@ -1485,7 +1487,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/vickispark/Desktop/GitRepo/ngboot/aglr-app/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! C:\Users\vivek_pathi\Desktop\git\ngboot\aglr-app\src\main.ts */"./src/main.ts");
 
 
 /***/ })

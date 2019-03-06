@@ -1,0 +1,123 @@
+<html>
+<head>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+</head>
+ 
+<body>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark ">
+   <!--<div class="collapse navbar-collapse"  id="myNavbar">--> 
+  <div class="navbar-header">
+     <!-- <a class="navbar-brand" href="#">V</a>-->
+<!--        V <img src="#" alt="V"> -->
+
+      <ul class="navbar-nav" id="myNavbar">
+        <!--  <li ><a class="nav-link" href="#">HOME </a></li>-->
+          <li class="active"><a class="nav-link"  href="#section2">PORTFOLIO<span class="sr-only">(current)</span></a></li> 
+           <li><a class="nav-link" href="#section3">SERVICES</a></li>     
+           <li><a class="nav-link" href="#section4">ABOUT ME</a></li>  
+      </ul>
+      </div>
+    </nav>
+  <div id="section1" class="container-fluid ">
+  <div class="row row-eq-height ">
+  <div class="s1  col-sm-10 col-md-10 ">
+
+    <h1>Software Developer</h1>
+    <h2>Frontend Web Development and
+      PL/SQL development</h2>
+    <div class="bttns pull-right">
+  <a href="https://www.freecodecamp.com/vickispark" target='_blank'><button class="btn btn-info"><small><span class="glyphicon glyphicon-info-sign"></span>freeCodeCamp</small>
+    </button></a>
+    </div>
+                </div>
+
+   <div class="sec1 col-sm-2 col-md-2 vertical-align">
+      
+<img src="https://lh3.googleusercontent.com/-BMeF0fHpWfI/WBZDH4sfV3I/AAAAAAAAAH4/wex3rxNQQTQoNz_cTLi0wKWwvT7yyEUcQCEw/w139-h140-p/_20151217_134105.JPG" alt="..." class="i1 img-responsive">
+  <br>  
+             <div>
+     <a href="https://www.facebook.com/vicki.spark.1" target='_blank'> <button class="btn btn-primary  "><i class="fa fa-facebook-square  fa-2x"></i></button></a>
+     <a href="https://www.linkedin.com/in/vivek-pathi-b3b15448/" target='_blank'>  <button class="btn btn-primary"><i class="fa fa-linkedin-square fa-2x"></i></button></a>
+             </div>
+    
+         </div>
+    </div>
+</div>
+  
+  <div id="section2" class="s2 container-fluid">
+    <h2 class="text-center ">>>>>PORTFOLIO>>>></h2>
+    <div class="row">
+      <div class="col-sm-6">
+    <img src="https://lh5.ggpht.com/9V3yhML2mywA38y4zQH0LPD8M-h6kQCR6KnpxLK2WfEkuL3oKfcwBQzolVx3gqX6fK0=h310" alt="..." class="img-thumbnail img-responsive"></div>
+            <div class="col-sm-6">
+
+     <img src="https://lh5.ggpht.com/9V3yhML2mywA38y4zQH0LPD8M-h6kQCR6KnpxLK2WfEkuL3oKfcwBQzolVx3gqX6fK0=h310" alt="..." class="img-thumbnail img-responsive"> <br><br></div>
+      
+      <div class="col-sm-6">
+    <img src="https://lh5.ggpht.com/9V3yhML2mywA38y4zQH0LPD8M-h6kQCR6KnpxLK2WfEkuL3oKfcwBQzolVx3gqX6fK0=h310" alt="..." class="img-thumbnail img-responsive"></div>
+        <div class="col-sm-6">
+<img src="https://lh5.ggpht.com/9V3yhML2mywA38y4zQH0LPD8M-h6kQCR6KnpxLK2WfEkuL3oKfcwBQzolVx3gqX6fK0=h310" alt="..." class="img-thumbnail img-responsive"></div>
+    </div>
+  </div>
+  
+  <div id="section3" class="s3">
+    <h2 class="text-center">SERVICES</h2>
+  </div>
+  
+    <div id="section4" class="s4">
+    <h2 class="text-center">ABOUT ME</h2>
+     <h2 id="con" class="text-center">CONTACT</h2>
+
+  </div>
+<script>
+// $("#po").click(function() {
+//$("#po").addClass("active");
+//});
+
+$(document).ready(function() {
+    $("#con").html('<h1>animated fadeOt</h1>');
+  $("li").addClass("animated bounceInDown");
+
+  // Add scrollspy to <body>
+  $('body').scrollspy({
+    target: ".navbar",
+    offset: 50
+  });
+
+  // Add smooth scrolling on all links inside the navbar
+  $("#myNavbar a").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function() {
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+  </body>
+<style>
+  
+
+ 
+</style>  
+  </html>

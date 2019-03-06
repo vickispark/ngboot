@@ -12,8 +12,11 @@ import { LoginComponent } from './login/login.component';
 import { ErrorComponent } from './error/error.component';
 //todos
 
+import { PortfolioComponent } from './portfolio/portfolio.component';
+
+
 const routes: Routes = [
-  { path: '', redirectTo: '/car-list', pathMatch: 'full' },
+  { path: '', redirectTo: '/portfolio', pathMatch: 'full' },
   {
     path: 'car-list',
     component: CarListComponent
@@ -29,7 +32,8 @@ const routes: Routes = [
   ,{ path: 'welcome/:name', component: WelcomeComponent, canActivate:[RouteGuardService]},
   { path: 'todos', component: ListTodosComponent, canActivate:[RouteGuardService] },
   { path: 'logout', component: LogoutComponent, canActivate:[RouteGuardService] },
-  { path: 'todos/:id', component: TodoComponent, canActivate:[RouteGuardService] }
+  { path: 'todos/:id', component: TodoComponent, canActivate:[RouteGuardService] },
+  { path: 'portfolio', component: PortfolioComponent, canActivate:[RouteGuardService] }
 ];
 
 // const routes: Routes = [

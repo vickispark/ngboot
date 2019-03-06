@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.Collection;
 import java.util.stream.Collectors;
 
+
 @RestController
 class CoolCarController {
     private CarRepository repository;

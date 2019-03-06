@@ -19,6 +19,7 @@ import { MenuComponent } from './menu/menu.component';
 import { FooterComponent } from './footer/footer.component';
 import { LogoutComponent } from './logout/logout.component';
 import { TodoComponent } from './todo/todo.component';
+import { PortfolioComponent } from './portfolio/portfolio.component';
 //todos
 
 @NgModule({
@@ -33,7 +34,8 @@ import { TodoComponent } from './todo/todo.component';
     MenuComponent,
     FooterComponent,
     LogoutComponent,
-    TodoComponent//todos end
+    TodoComponent,
+    PortfolioComponent//todos end
   ],
   imports: [
     BrowserModule,

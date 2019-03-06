@@ -16,6 +16,7 @@ import { Component, OnInit } from '@angular/core';//'./app.component';
 
 //public class SpringBootFirstWebApplication implements SomeInterface{
 export class WelcomeComponent implements OnInit {
+  title = 'Angular with Spring Boot';
 
   message = 'Some Welcome Message'
   welcomeMessageFromService:string
