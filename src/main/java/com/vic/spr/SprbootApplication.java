@@ -8,6 +8,7 @@ import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.core.Ordered;
+import org.springframework.web.bind.annotation.*;
 //import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
@@ -23,12 +24,18 @@ import java.util.Collections;
 
 //@EnableResourceServer
 @SpringBootApplication
+@RestController
 @PropertySource(value = {"classpath:configuration.properties"})
 public class SprbootApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(SprbootApplication.class, args);
     }
+   
+//    @RequestMapping("/")
+//    public String home() {
+//        return "Hello World!";
+//    }
 
     @Bean
     ApplicationRunner init(CarRepository repository) {

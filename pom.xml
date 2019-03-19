@@ -16,6 +16,8 @@
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
+	 <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
 	</properties>
 
@@ -23,6 +25,14 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+			<!-- GCP -->
+			<exclusions>
+        <exclusion>
+          <groupId>org.springframework.boot</groupId>
+          <artifactId>spring-boot-starter-tomcat</artifactId>
+        </exclusion>
+      </exclusions>
+      <!-- GCP -->
 		</dependency>
 
 		<dependency>
@@ -59,6 +69,14 @@
 			<artifactId>jstl</artifactId>
           </dependency>	 -->
 		<!-- end -->
+		<!-- GCP -->
+		 <!-- Include Servlet API -->
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+      <scope>provided</scope>
+    </dependency>
+		<!-- GCP -->
 		<!-- Logging AOP -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -66,10 +84,10 @@
        </dependency>
 		<!-- end -->
 		<!-- hot reload -->
-			<dependency>
+	<!--		<dependency>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-devtools</artifactId>
-    </dependency>
+    </dependency>-->
     <!-- hotreload -->
     
     <!-- CAR DEPS -->
@@ -88,6 +106,13 @@
             <artifactId>spring-boot-starter-data-rest</artifactId>
         </dependency>
     <!-- CAR DEPS -->
+    <!-- H2 DB -->
+    <dependency>
+    <groupId>com.h2database</groupId>
+    <artifactId>h2</artifactId>
+    <scope>runtime</scope>
+    </dependency>
+    <!-- H2 DB -->
 	</dependencies>
 
 	<build>
@@ -96,6 +121,23 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			<!-- GCP -->
+			      <!-- [START cloudplugin] -->
+            <plugin>
+               <groupId>com.google.cloud.tools</groupId>
+               <artifactId>appengine-maven-plugin</artifactId>
+              <version>1.3.2</version>
+             <configuration>
+               </configuration>
+              </plugin>
+      <!-- [END cloudplugin] -->
+       <plugin>
+        <artifactId>maven-war-plugin</artifactId>
+        <configuration>
+          <failOnMissingWebXml>false</failOnMissingWebXml>
+        </configuration>
+      </plugin>
+			<!-- GCP APPENGINE -->
 		</plugins>
 	</build>
 

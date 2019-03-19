@@ -43,6 +43,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _logout_logout_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./logout/logout.component */ "./src/app/logout/logout.component.ts");
 /* harmony import */ var _list_todos_list_todos_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./list-todos/list-todos.component */ "./src/app/list-todos/list-todos.component.ts");
 /* harmony import */ var _welcome_welcome_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./welcome/welcome.component */ "./src/app/welcome/welcome.component.ts");
+/* harmony import */ var _portfolio_portfolio_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./portfolio/portfolio.component */ "./src/app/portfolio/portfolio.component.ts");
 
 
 
@@ -55,8 +56,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 //todos
+
 var routes = [
-    { path: '', redirectTo: '/car-list', pathMatch: 'full' },
+    { path: '', redirectTo: '/portfolio', pathMatch: 'full' },
     {
         path: 'car-list',
         component: _car_list_car_list_component__WEBPACK_IMPORTED_MODULE_3__["CarListComponent"]
@@ -72,7 +74,8 @@ var routes = [
     { path: 'welcome/:name', component: _welcome_welcome_component__WEBPACK_IMPORTED_MODULE_9__["WelcomeComponent"], canActivate: [_service_route_guard_service__WEBPACK_IMPORTED_MODULE_6__["RouteGuardService"]] },
     { path: 'todos', component: _list_todos_list_todos_component__WEBPACK_IMPORTED_MODULE_8__["ListTodosComponent"], canActivate: [_service_route_guard_service__WEBPACK_IMPORTED_MODULE_6__["RouteGuardService"]] },
     { path: 'logout', component: _logout_logout_component__WEBPACK_IMPORTED_MODULE_7__["LogoutComponent"], canActivate: [_service_route_guard_service__WEBPACK_IMPORTED_MODULE_6__["RouteGuardService"]] },
-    { path: 'todos/:id', component: _todo_todo_component__WEBPACK_IMPORTED_MODULE_5__["TodoComponent"], canActivate: [_service_route_guard_service__WEBPACK_IMPORTED_MODULE_6__["RouteGuardService"]] }
+    { path: 'todos/:id', component: _todo_todo_component__WEBPACK_IMPORTED_MODULE_5__["TodoComponent"], canActivate: [_service_route_guard_service__WEBPACK_IMPORTED_MODULE_6__["RouteGuardService"]] },
+    { path: 'portfolio', component: _portfolio_portfolio_component__WEBPACK_IMPORTED_MODULE_10__["PortfolioComponent"], canActivate: [_service_route_guard_service__WEBPACK_IMPORTED_MODULE_6__["RouteGuardService"]] }
 ];
 // const routes: Routes = [
 //   { path: '', component: LoginComponent  },//canActivate, RouteGuardService
@@ -117,7 +120,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\r\n\r\n<app-menu></app-menu>\r\n\r\n<div class=\"container\">\r\n    <router-outlet></router-outlet>\r\n</div>\r\n\r\n\r\n\r\n<!-- <app-car-list></app-car-list> -->\r\n\r\n<app-footer></app-footer>\r\n\r\n<!--The content below is only a placeholder and can be replaced.-->\r\n<div style=\"text-align:center\">\r\n  <h1>\r\n    Welcome to {{ title }}!\r\n  </h1>\r\n  <img width=\"300\" alt=\"Angular Logo\" src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==\">\r\n</div>\r\n<h2>Here are some links to help you start: </h2>\r\n<ul>\r\n  <li><h2><a target=\"_blank\" rel=\"noopener\" href=\"https://angular.io/tutorial\">Tour of Heroes</a></h2></li>\r\n  <li><h2><a target=\"_blank\" rel=\"noopener\" href=\"https://angular.io/cli\">CLI Documentation</a></h2></li>\r\n  <li><h2><a target=\"_blank\" rel=\"noopener\" href=\"https://blog.angular.io/\">Angular blog</a></h2></li>\r\n</ul>\r\n"
+module.exports = "\n\n<app-menu></app-menu>\n\n<div class=\"container\">\n    <router-outlet></router-outlet>\n</div>\n\n\n\n<!-- <app-car-list></app-car-list> -->\n\n<app-footer></app-footer>\n\n"
 
 /***/ }),
 
@@ -165,8 +168,10 @@ var AppComponent = /** @class */ (function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "API_URL", function() { return API_URL; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TODO_JPA_API_URL", function() { return TODO_JPA_API_URL; });
-var API_URL = "http://localhost:4343";
-var TODO_JPA_API_URL = "http://localhost:4343/jpa";
+//export const API_URL = "http://localhost:8080"
+//export const TODO_JPA_API_URL = "http://localhost:8080/jpa"
+var API_URL = "https://javanewproj.appspot.com";
+var TODO_JPA_API_URL = "https://javanewproj.appspot.com/jpa";
 
 
 /***/ }),
@@ -198,6 +203,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _footer_footer_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./footer/footer.component */ "./src/app/footer/footer.component.ts");
 /* harmony import */ var _logout_logout_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./logout/logout.component */ "./src/app/logout/logout.component.ts");
 /* harmony import */ var _todo_todo_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./todo/todo.component */ "./src/app/todo/todo.component.ts");
+/* harmony import */ var _portfolio_portfolio_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./portfolio/portfolio.component */ "./src/app/portfolio/portfolio.component.ts");
 
 
 
@@ -209,6 +215,7 @@ __webpack_require__.r(__webpack_exports__);
 
 //todos
 //import { HttpIntercepterBasicAuthService } from './service/http/http-intercepter-basic-auth.service';
+
 
 
 
@@ -234,7 +241,8 @@ var AppModule = /** @class */ (function () {
                 _menu_menu_component__WEBPACK_IMPORTED_MODULE_13__["MenuComponent"],
                 _footer_footer_component__WEBPACK_IMPORTED_MODULE_14__["FooterComponent"],
                 _logout_logout_component__WEBPACK_IMPORTED_MODULE_15__["LogoutComponent"],
-                _todo_todo_component__WEBPACK_IMPORTED_MODULE_16__["TodoComponent"] //todos end
+                _todo_todo_component__WEBPACK_IMPORTED_MODULE_16__["TodoComponent"],
+                _portfolio_portfolio_component__WEBPACK_IMPORTED_MODULE_17__["PortfolioComponent"] //todos end
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
@@ -273,7 +281,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "  <form #carForm=\"ngForm\" (ngSubmit)=\"save(carForm.value)\">\r\n      <h2>{{car.name ? 'Edit' : 'Add'}} Car</h2>\r\n      <input type=\"hidden\" name=\"href\" [(ngModel)]=\"car.href\">\r\n        <input  placeholder=\"Car Name\" [(ngModel)]=\"car.name\"\r\n               required name=\"name\" #name>\r\n      <button color=\"primary\" type=\"submit\"\r\n              [disabled]=\"!carForm.form.valid\">Save</button>\r\n      <button  color=\"secondary\" (click)=\"remove(car.href)\"\r\n              *ngIf=\"car.href\" type=\"button\">Delete</button>\r\n      <a routerLink=\"/car-list\">Cancel</a>\r\n      <!-- <div class=\"giphy\">\r\n        <img src=\"{{car.giphyUrl}}\" alt=\"{{car.name}}\">\r\n      </div> -->\r\n  </form>\r\n"
+module.exports = "  <form #carForm=\"ngForm\" (ngSubmit)=\"save(carForm.value)\">\n      <h2>{{car.name ? 'Edit' : 'Add'}} Car</h2>\n      <input type=\"hidden\" name=\"href\" [(ngModel)]=\"car.href\">\n        <input  placeholder=\"Car Name\" [(ngModel)]=\"car.name\"\n               required name=\"name\" #name>\n      <button color=\"primary\" type=\"submit\"\n              [disabled]=\"!carForm.form.valid\">Save</button>\n      <button  color=\"secondary\" (click)=\"remove(car.href)\"\n              *ngIf=\"car.href\" type=\"button\">Delete</button>\n      <a routerLink=\"/car-list\">Cancel</a>\n      <!-- <div class=\"giphy\">\n        <img src=\"{{car.giphyUrl}}\" alt=\"{{car.name}}\">\n      </div> -->\n  </form>\n"
 
 /***/ }),
 
@@ -378,7 +386,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h2>Car List</h2>\r\n\r\n      <div *ngFor=\"let car of cars\">\r\n        <h3>\r\n          <a [routerLink]=\"['/car-edit', car.id]\">{{car.name}}</a>\r\n        </h3>\r\n      </div>\r\n   \r\n  <button  [routerLink]=\"['/car-add']\">Add</button>\r\n"
+module.exports = "<h2>Car List</h2>\n\n      <div *ngFor=\"let car of cars\">\n        <h3>\n          <a [routerLink]=\"['/car-edit', car.id]\">{{car.name}}</a>\n        </h3>\n      </div>\n   \n  <button  [routerLink]=\"['/car-add']\">Add</button>\n"
 
 /***/ }),
 
@@ -487,7 +495,7 @@ var ErrorComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".footer {\r\n    position: relative;\r\n    bottom: 0;\r\n    width:100%;\r\nheight: 40px;\r\n    background-color: #222222;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZm9vdGVyL2Zvb3Rlci5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksa0JBQWtCO0lBQ2xCLFNBQVM7SUFDVCxVQUFVO0FBQ2QsWUFBWTtJQUNSLHlCQUF5QjtBQUM3QiIsImZpbGUiOiJzcmMvYXBwL2Zvb3Rlci9mb290ZXIuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5mb290ZXIge1xyXG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xyXG4gICAgYm90dG9tOiAwO1xyXG4gICAgd2lkdGg6MTAwJTtcclxuaGVpZ2h0OiA0MHB4O1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogIzIyMjIyMjtcclxufSJdfQ== */"
+module.exports = ".footer {\n    position: relative;\n    bottom: 0;\n    width:100%;\nheight: 40px;\n    background-color: #222222;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZm9vdGVyL2Zvb3Rlci5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksa0JBQWtCO0lBQ2xCLFNBQVM7SUFDVCxVQUFVO0FBQ2QsWUFBWTtJQUNSLHlCQUF5QjtBQUM3QiIsImZpbGUiOiJzcmMvYXBwL2Zvb3Rlci9mb290ZXIuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5mb290ZXIge1xuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgICBib3R0b206IDA7XG4gICAgd2lkdGg6MTAwJTtcbmhlaWdodDogNDBweDtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjMjIyMjIyO1xufSJdfQ== */"
 
 /***/ }),
 
@@ -498,7 +506,7 @@ module.exports = ".footer {\r\n    position: relative;\r\n    bottom: 0;\r\n    
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<footer class=\"footer\">\r\n    <div class=\"container\">\r\n        <span class=\"text-muted\">All Rights Reserved @Company</span>\r\n    </div>\r\n\r\n</footer>"
+module.exports = "<footer class=\"footer\">\n    <div class=\"container\">\n        <span class=\"text-muted\">All Rights Reserved @Company</span>\n    </div>\n\n</footer>"
 
 /***/ }),
 
@@ -554,7 +562,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h1> Todo </h1>\r\n\r\n<div class=\"alert alert-success\" *ngIf='message'>{{message}}</div>\r\n\r\n<div class=\"container\">\r\n  <table class=\"table\">\r\n    <thead>\r\n      <tr>\r\n        <th>Description</th>\r\n        <th>Target Date</th>\r\n        <th>is Completed?</th>\r\n        <th>Update</th>\r\n        <th>Delete</th>\r\n      </tr>\r\n    </thead>\r\n    <tbody>\r\n      <!--   for (Todo todo: todos) {  -->\r\n              <tr *ngFor=\"let todo of todos\">\r\n                <td>{{todo.description}}</td>\r\n                <td>{{todo.targetDate | date | uppercase}}</td>\r\n                <td>{{todo.done}}</td>\r\n                <td><button (click)=\"updateTodo(todo.id)\" class=\"btn btn-success\">Update</button></td>\r\n                <td><button (click)=\"deleteTodo(todo.id)\" class=\"btn btn-warning\">Delete</button></td>\r\n              </tr>\r\n      <!-- } -->\r\n    </tbody>\r\n\r\n  </table>\r\n\r\n  <div class=\"row\">\r\n      <button (click)=\"addTodo()\" class=\"btn btn-success\">Add</button>\r\n  </div>\r\n\r\n</div>"
+module.exports = "<h1> Todo </h1>\n\n<div class=\"alert alert-success\" *ngIf='message'>{{message}}</div>\n\n<div class=\"container\">\n  <table class=\"table\">\n    <thead>\n      <tr>\n        <th>Description</th>\n        <th>Target Date</th>\n        <th>is Completed?</th>\n        <th>Update</th>\n        <th>Delete</th>\n      </tr>\n    </thead>\n    <tbody>\n      <!--   for (Todo todo: todos) {  -->\n              <tr *ngFor=\"let todo of todos\">\n                <td>{{todo.description}}</td>\n                <td>{{todo.targetDate | date | uppercase}}</td>\n                <td>{{todo.done}}</td>\n                <td><button (click)=\"updateTodo(todo.id)\" class=\"btn btn-success\">Update</button></td>\n                <td><button (click)=\"deleteTodo(todo.id)\" class=\"btn btn-warning\">Delete</button></td>\n              </tr>\n      <!-- } -->\n    </tbody>\n\n  </table>\n\n  <div class=\"row\">\n      <button (click)=\"addTodo()\" class=\"btn btn-success\">Add</button>\n  </div>\n\n</div>"
 
 /***/ }),
 
@@ -664,7 +672,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<H1>Login!</H1>\r\n\r\n<div class=\"container\">\r\n  <div class=\"alert alert-warning\" *ngIf='invalidLogin'>{{errorMessage}}</div>\r\n\r\n  <div>\r\n    User Name : <input type=\"text\" name=\"username\" [(ngModel)]=\"username\">\r\n    Password  : <input type=\"password\" name=\"password\" [(ngModel)]=\"password\">\r\n\r\n    <!-- User Name : {{username}} -->\r\n\r\n    <!-- <button (click)=handleLogin() class=\"btn btn-success\">Login</button> -->\r\n    <!-- <button (click)=handleBasicAuthLogin() class=\"btn btn-success\">Login</button> -->\r\n    <button (click)=handleJWTAuthLogin() class=\"btn btn-success\">Login</button>\r\n    \r\n  </div>\r\n</div>"
+module.exports = "<H1>Login!</H1>\n\n<div class=\"container\">\n  <div class=\"alert alert-warning\" *ngIf='invalidLogin'>{{errorMessage}}</div>\n\n  <div>\n    User Name : <input type=\"text\" name=\"username\" [(ngModel)]=\"username\">\n    Password  : <input type=\"password\" name=\"password\" [(ngModel)]=\"password\">\n\n    <!-- User Name : {{username}} -->\n\n    <!-- <button (click)=handleLogin() class=\"btn btn-success\">Login</button> -->\n    <!-- <button (click)=handleBasicAuthLogin() class=\"btn btn-success\">Login</button> -->\n    <button (click)=handleJWTAuthLogin() class=\"btn btn-success\">Login</button>\n    \n  </div>\n</div>"
 
 /***/ }),
 
@@ -776,7 +784,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<H1>You are logged out</H1>\r\n<div class=\"container\">\r\n  Thank You For Using Our Application.\r\n</div>"
+module.exports = "<H1>You are logged out</H1>\n<div class=\"container\">\n  Thank You For Using Our Application.\n</div>"
 
 /***/ }),
 
@@ -836,7 +844,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<header>\r\n    <nav class=\"navbar navbar-expand-md navbar-dark bg-dark\">\r\n        <div><a href=\"/\" class=\"navbar-brand\">\r\n            ngBoot</a></div>\r\n\r\n        <ul class=\"navbar-nav\">\r\n            <li><a *ngIf=\"hardcodedAuthenticationService.isUserLoggedIn()\" routerLink=\"/welcome/ngBoot\" class=\"nav-link\">Home</a></li>\r\n            <li><a *ngIf=\"hardcodedAuthenticationService.isUserLoggedIn()\" routerLink=\"/todos\" class=\"nav-link\">Todos</a></li>\r\n        </ul>\r\n\r\n        <ul class=\"navbar-nav navbar-collapse justify-content-end\">\r\n                <li><a *ngIf=\"!hardcodedAuthenticationService.isUserLoggedIn()\" routerLink=\"/login\" class=\"nav-link\">Login</a></li>\r\n                <li><a *ngIf=\"hardcodedAuthenticationService.isUserLoggedIn()\" routerLink=\"/logout\" class=\"nav-link\">Logout</a></li>\r\n        </ul>\r\n    </nav>\r\n</header>"
+module.exports = "<header>\n    <nav class=\"navbar navbar-expand-md navbar-dark bg-dark\">\n        <!--    <nav class=\"navbar navbar-inverse navbar-fixed-top\">-->\n       <!--    <div class=\"container\">  -->\n        <div><a href=\"/\" class=\"navbar-brand\">\n            ngBoot</a></div>\n          <!--<div class=\"navbar-header\"><a class=\"navbar-brand\" href=\"#\">V</a>\n            </div>-->  \n             \n           <!-- <div class=\"collapse navbar-collapse\"  id=\"myNavbar\">-->\n     <!--   <ul class=\"nav navbar-nav\">-->\n        <ul class=\"navbar-nav\">\n            <li><a *ngIf=\"hardcodedAuthenticationService.isUserLoggedIn()\" routerLink=\"/welcome/ngBoot\" class=\"nav-link\">Home</a></li>\n            <li><a *ngIf=\"hardcodedAuthenticationService.isUserLoggedIn()\" routerLink=\"/todos\" class=\"nav-link\">Todos</a></li>\n            <li><a *ngIf=\"hardcodedAuthenticationService.isUserLoggedIn()\" routerLink=\"/portfolio\" class=\"nav-link\">MyPortfolio</a></li>\n           \n        </ul>\n\n        <ul class=\"navbar-nav navbar-collapse justify-content-end\">\n                <li><a *ngIf=\"!hardcodedAuthenticationService.isUserLoggedIn()\" routerLink=\"/login\" class=\"nav-link\">Login</a></li>\n                <li><a *ngIf=\"hardcodedAuthenticationService.isUserLoggedIn()\" routerLink=\"/logout\" class=\"nav-link\">Logout</a></li>\n        </ul>\n          <!-- </div>-->\n    <!--</div>-->\n    </nav>\n\n    \n</header>\n\n\n       \n        \n\n"
 
 /***/ }),
 
@@ -873,6 +881,62 @@ var MenuComponent = /** @class */ (function () {
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_service_hardcoded_authentication_service__WEBPACK_IMPORTED_MODULE_1__["HardcodedAuthenticationService"]])
     ], MenuComponent);
     return MenuComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/portfolio/portfolio.component.css":
+/*!***************************************************!*\
+  !*** ./src/app/portfolio/portfolio.component.css ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "body{\n    background-color:#FF0!important;\n    \n}\n.s1{\n    color:white;\n    background: url('https://cdn-images-1.medium.com/max/1200/1*tFbqYogOnqbRz1GT0uGzwg.png');\n  }\n.sec1{\n   background-color:#ddd; \n\n  }\n.i1{\n      border-radius:10px;\n\n  }\n.vertical-align {\n      display: flex;\n      flex-direction:column;\n    justify-content:center;\n     align-items: left;\n\n\n  }\n.row-eq-height{\n      display: flex;\n  }\n#section3 {padding-top:50px;height:500px;color: #fff; background-color: #673ab7;}\n#section4 {padding-top:50px;height:500px;color: #ffF; background-color: #0Ff;}\n.s1 {padding-top:0px;height:260px;color: #fff; background-color: #673ab7;}\n.bttns {\n    position: absolute;\n    bottom: 0;\n    right:10px;\n  }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcG9ydGZvbGlvL3BvcnRmb2xpby5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksK0JBQStCOztBQUVuQztBQUNBO0lBQ0ksV0FBVztJQUNYLHdGQUF3RjtFQUMxRjtBQUVBO0dBQ0MscUJBQXFCOztFQUV0QjtBQUNBO01BQ0ksa0JBQWtCOztFQUV0QjtBQUNBO01BQ0ksYUFBYTtNQUNiLHFCQUFxQjtJQUN2QixzQkFBc0I7S0FDckIsaUJBQWlCOzs7RUFHcEI7QUFFQTtNQUlJLGFBQWE7RUFDakI7QUFDRSxXQUFXLGdCQUFnQixDQUFDLFlBQVksQ0FBQyxXQUFXLEVBQUUseUJBQXlCLENBQUM7QUFDakYsV0FBVyxnQkFBZ0IsQ0FBQyxZQUFZLENBQUMsV0FBVyxFQUFFLHNCQUFzQixDQUFDO0FBRTdFLEtBQUssZUFBZSxDQUFDLFlBQVksQ0FBQyxXQUFXLEVBQUUseUJBQXlCLENBQUM7QUFDMUU7SUFDRSxrQkFBa0I7SUFDbEIsU0FBUztJQUNULFVBQVU7RUFDWiIsImZpbGUiOiJzcmMvYXBwL3BvcnRmb2xpby9wb3J0Zm9saW8uY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbImJvZHl7XG4gICAgYmFja2dyb3VuZC1jb2xvcjojRkYwIWltcG9ydGFudDtcbiAgICBcbn1cbi5zMXtcbiAgICBjb2xvcjp3aGl0ZTtcbiAgICBiYWNrZ3JvdW5kOiB1cmwoJ2h0dHBzOi8vY2RuLWltYWdlcy0xLm1lZGl1bS5jb20vbWF4LzEyMDAvMSp0RmJxWW9nT25xYlJ6MUdUMHVHendnLnBuZycpO1xuICB9XG5cbiAgLnNlYzF7XG4gICBiYWNrZ3JvdW5kLWNvbG9yOiNkZGQ7IFxuXG4gIH1cbiAgLmkxe1xuICAgICAgYm9yZGVyLXJhZGl1czoxMHB4O1xuXG4gIH1cbiAgLnZlcnRpY2FsLWFsaWduIHtcbiAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICBmbGV4LWRpcmVjdGlvbjpjb2x1bW47XG4gICAganVzdGlmeS1jb250ZW50OmNlbnRlcjtcbiAgICAgYWxpZ24taXRlbXM6IGxlZnQ7XG5cblxuICB9XG5cbiAgLnJvdy1lcS1oZWlnaHR7XG4gICAgICBkaXNwbGF5OiAtd2Via2l0LWJveDtcbiAgICAgIGRpc3BsYXk6IC13ZWJraXQtZmxleDtcbiAgICAgIGRpc3BsYXk6IC1tcy1mbGV4Ym94O1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgfVxuICAgICNzZWN0aW9uMyB7cGFkZGluZy10b3A6NTBweDtoZWlnaHQ6NTAwcHg7Y29sb3I6ICNmZmY7IGJhY2tncm91bmQtY29sb3I6ICM2NzNhYjc7fVxuICAgI3NlY3Rpb240IHtwYWRkaW5nLXRvcDo1MHB4O2hlaWdodDo1MDBweDtjb2xvcjogI2ZmRjsgYmFja2dyb3VuZC1jb2xvcjogIzBGZjt9XG5cbiAgIC5zMSB7cGFkZGluZy10b3A6MHB4O2hlaWdodDoyNjBweDtjb2xvcjogI2ZmZjsgYmFja2dyb3VuZC1jb2xvcjogIzY3M2FiNzt9XG4gIC5idHRucyB7XG4gICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgIGJvdHRvbTogMDtcbiAgICByaWdodDoxMHB4O1xuICB9XG4iXX0= */"
+
+/***/ }),
+
+/***/ "./src/app/portfolio/portfolio.component.html":
+/*!****************************************************!*\
+  !*** ./src/app/portfolio/portfolio.component.html ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<html>\n<head>\n     <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js\"></script>\n  <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\"></script>\n  <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css\"/>\n  <link rel=\"stylesheet\" href=\"https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css\">\n  <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css\">\n\n</head>\n \n<body>\n<nav class=\"navbar navbar-expand-md navbar-dark bg-dark \">\n   <!--<div class=\"collapse navbar-collapse\"  id=\"myNavbar\">--> \n  <div class=\"navbar-header\">\n     <!-- <a class=\"navbar-brand\" href=\"#\">V</a>-->\n<!--        V <img src=\"#\" alt=\"V\"> -->\n\n      <ul class=\"navbar-nav\" id=\"myNavbar\">\n        <!--  <li ><a class=\"nav-link\" href=\"#\">HOME </a></li>-->\n          <li class=\"active\"><a class=\"nav-link\"  href=\"#section2\">PORTFOLIO<span class=\"sr-only\">(current)</span></a></li> \n           <li><a class=\"nav-link\" href=\"#section3\">SERVICES</a></li>     \n           <li><a class=\"nav-link\" href=\"#section4\">ABOUT ME</a></li>  \n      </ul>\n      </div>\n    </nav>\n  <div id=\"section1\" class=\"container-fluid \">\n  <div class=\"row row-eq-height \">\n  <div class=\"s1  col-sm-10 col-md-10 \">\n\n    <h1>Software Developer</h1>\n    <h2>Frontend Web Development and\n      PL/SQL development</h2>\n    <div class=\"bttns pull-right\">\n  <a href=\"https://www.freecodecamp.com/vickispark\" target='_blank'><button class=\"btn btn-info\"><small><span class=\"glyphicon glyphicon-info-sign\"></span>freeCodeCamp</small>\n    </button></a>\n    </div>\n                </div>\n\n   <div class=\"sec1 col-sm-2 col-md-2 vertical-align\">\n      \n<img src=\"https://lh3.googleusercontent.com/-BMeF0fHpWfI/WBZDH4sfV3I/AAAAAAAAAH4/wex3rxNQQTQoNz_cTLi0wKWwvT7yyEUcQCEw/w139-h140-p/_20151217_134105.JPG\" alt=\"...\" class=\"i1 img-responsive\">\n  <br>  \n             <div>\n     <a href=\"https://www.facebook.com/vicki.spark.1\" target='_blank'> <button class=\"btn btn-primary  \"><i class=\"fa fa-facebook-square  fa-2x\"></i></button></a>\n     <a href=\"https://www.linkedin.com/in/vivek-pathi-b3b15448/\" target='_blank'>  <button class=\"btn btn-primary\"><i class=\"fa fa-linkedin-square fa-2x\"></i></button></a>\n             </div>\n    \n         </div>\n    </div>\n</div>\n  \n  <div id=\"section2\" class=\"s2 container-fluid\">\n    <h2 class=\"text-center \">>>>>PORTFOLIO>>>></h2>\n    <div class=\"row\">\n      <div class=\"col-sm-6\">\n    <img src=\"https://lh5.ggpht.com/9V3yhML2mywA38y4zQH0LPD8M-h6kQCR6KnpxLK2WfEkuL3oKfcwBQzolVx3gqX6fK0=h310\" alt=\"...\" class=\"img-thumbnail img-responsive\"></div>\n            <div class=\"col-sm-6\">\n\n     <img src=\"https://lh5.ggpht.com/9V3yhML2mywA38y4zQH0LPD8M-h6kQCR6KnpxLK2WfEkuL3oKfcwBQzolVx3gqX6fK0=h310\" alt=\"...\" class=\"img-thumbnail img-responsive\"> <br><br></div>\n      \n      <div class=\"col-sm-6\">\n    <img src=\"https://lh5.ggpht.com/9V3yhML2mywA38y4zQH0LPD8M-h6kQCR6KnpxLK2WfEkuL3oKfcwBQzolVx3gqX6fK0=h310\" alt=\"...\" class=\"img-thumbnail img-responsive\"></div>\n        <div class=\"col-sm-6\">\n<img src=\"https://lh5.ggpht.com/9V3yhML2mywA38y4zQH0LPD8M-h6kQCR6KnpxLK2WfEkuL3oKfcwBQzolVx3gqX6fK0=h310\" alt=\"...\" class=\"img-thumbnail img-responsive\"></div>\n    </div>\n  </div>\n  \n  <div id=\"section3\" class=\"s3\">\n    <h2 class=\"text-center\">SERVICES</h2>\n  </div>\n  \n    <div id=\"section4\" class=\"s4\">\n    <h2 class=\"text-center\">ABOUT ME</h2>\n     <h2 id=\"con\" class=\"text-center\">CONTACT</h2>\n\n  </div>\n<script>\n// $(\"#po\").click(function() {\n//$(\"#po\").addClass(\"active\");\n//});\n\n$(document).ready(function() {\n    $(\"#con\").html('<h1>animated fadeOt</h1>');\n  $(\"li\").addClass(\"animated bounceInDown\");\n\n  // Add scrollspy to <body>\n  $('body').scrollspy({\n    target: \".navbar\",\n    offset: 50\n  });\n\n  // Add smooth scrolling on all links inside the navbar\n  $(\"#myNavbar a\").on('click', function(event) {\n    // Make sure this.hash has a value before overriding default behavior\n    if (this.hash !== \"\") {\n      // Prevent default anchor click behavior\n      event.preventDefault();\n\n      // Store hash\n      var hash = this.hash;\n\n      // Using jQuery's animate() method to add smooth page scroll\n      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area\n      $('html, body').animate({\n        scrollTop: $(hash).offset().top\n      }, 800, function() {\n\n        // Add hash (#) to URL when done scrolling (default click behavior)\n        window.location.hash = hash;\n      });\n    } // End if\n  });\n});\n</script>\n  </body>\n<style>\n  \n\n \n</style>  \n  </html>\n"
+
+/***/ }),
+
+/***/ "./src/app/portfolio/portfolio.component.ts":
+/*!**************************************************!*\
+  !*** ./src/app/portfolio/portfolio.component.ts ***!
+  \**************************************************/
+/*! exports provided: PortfolioComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PortfolioComponent", function() { return PortfolioComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var PortfolioComponent = /** @class */ (function () {
+    function PortfolioComponent() {
+    }
+    PortfolioComponent.prototype.ngOnInit = function () {
+    };
+    PortfolioComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-portfolio',
+            template: __webpack_require__(/*! ./portfolio.component.html */ "./src/app/portfolio/portfolio.component.html"),
+            styles: [__webpack_require__(/*! ./portfolio.component.css */ "./src/app/portfolio/portfolio.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    ], PortfolioComponent);
+    return PortfolioComponent;
 }());
 
 
@@ -1181,7 +1245,8 @@ __webpack_require__.r(__webpack_exports__);
 var CarService = /** @class */ (function () {
     function CarService(http) {
         this.http = http;
-        this.API = '//localhost:4343';
+        //public API = '//localhost:8080';
+        this.API = '//javanewproj.appspot.com';
         this.CAR_API = this.API + '/cars';
     }
     CarService.prototype.getAll = function () {
@@ -1223,7 +1288,7 @@ var CarService = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".ng-invalid:not(form) {\r\n    border-left: 5px solid red;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvdG9kby90b2RvLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSwwQkFBMEI7QUFDOUIiLCJmaWxlIjoic3JjL2FwcC90b2RvL3RvZG8uY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5uZy1pbnZhbGlkOm5vdChmb3JtKSB7XHJcbiAgICBib3JkZXItbGVmdDogNXB4IHNvbGlkIHJlZDtcclxufSJdfQ== */"
+module.exports = ".ng-invalid:not(form) {\n    border-left: 5px solid red;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvdG9kby90b2RvLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSwwQkFBMEI7QUFDOUIiLCJmaWxlIjoic3JjL2FwcC90b2RvL3RvZG8uY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5uZy1pbnZhbGlkOm5vdChmb3JtKSB7XG4gICAgYm9yZGVyLWxlZnQ6IDVweCBzb2xpZCByZWQ7XG59Il19 */"
 
 /***/ }),
 
@@ -1234,7 +1299,7 @@ module.exports = ".ng-invalid:not(form) {\r\n    border-left: 5px solid red;\r\n
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<H1>Todo</H1>\r\n\r\n<div class=\"container\">\r\n  <div class=\"alert alert-warning\" *ngIf=\"todoForm.dirty && todoForm.invalid\">Enter valid values</div>\r\n  <div class=\"alert alert-warning\" *ngIf=\"todoForm.dirty && targetDate.invalid\">Enter valid Target Date</div>\r\n  <div class=\"alert alert-warning\" *ngIf=\"todoForm.dirty && description.invalid\">Enter atleast 5 characters in Description</div>\r\n  \r\n  <form (ngSubmit)=\"!todoForm.invalid && saveTodo()\" #todoForm=\"ngForm\">\r\n    <fieldset class=\"form-group\">\r\n      <label>Description</label>\r\n      <input type=\"text\" #description=\"ngModel\" \r\n            [(ngModel)]=\"todo.description\" class=\"form-control\" \r\n                name=\"description\" required=\"required\" minlength=\"5\">\r\n    </fieldset>\r\n\r\n    <fieldset class=\"form-group\">\r\n        <label>Target Date</label>\r\n        <input type=\"date\" #targetDate=\"ngModel\"\r\n        [ngModel]=\"todo.targetDate | date:'yyyy-MM-dd' \"\r\n        (ngModelChange)=\"todo.targetDate = $event\"\r\n        class=\"form-control\" name=\"targetDate\" required=\"required\" >\r\n    </fieldset>\r\n\r\n    <button type=\"submit\" class=\"btn btn-success\">Save</button>\r\n  </form>  \r\n</div>"
+module.exports = "<H1>Todo</H1>\n\n<div class=\"container\">\n  <div class=\"alert alert-warning\" *ngIf=\"todoForm.dirty && todoForm.invalid\">Enter valid values</div>\n  <div class=\"alert alert-warning\" *ngIf=\"todoForm.dirty && targetDate.invalid\">Enter valid Target Date</div>\n  <div class=\"alert alert-warning\" *ngIf=\"todoForm.dirty && description.invalid\">Enter atleast 5 characters in Description</div>\n  \n  <form (ngSubmit)=\"!todoForm.invalid && saveTodo()\" #todoForm=\"ngForm\">\n    <fieldset class=\"form-group\">\n      <label>Description</label>\n      <input type=\"text\" #description=\"ngModel\" \n            [(ngModel)]=\"todo.description\" class=\"form-control\" \n                name=\"description\" required=\"required\" minlength=\"5\">\n    </fieldset>\n\n    <fieldset class=\"form-group\">\n        <label>Target Date</label>\n        <input type=\"date\" #targetDate=\"ngModel\"\n        [ngModel]=\"todo.targetDate | date:'yyyy-MM-dd' \"\n        (ngModelChange)=\"todo.targetDate = $event\"\n        class=\"form-control\" name=\"targetDate\" required=\"required\" >\n    </fieldset>\n\n    <button type=\"submit\" class=\"btn btn-success\">Save</button>\n  </form>  \n</div>"
 
 /***/ }),
 
@@ -1325,7 +1390,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<H1>Welcome!</H1>\r\n\r\n<div class=\"container\">\r\n  Welcome {{name}}. You can manage your todos <a routerLink=\"/todos\">here</a>\r\n</div>\r\n\r\n<div class=\"container\">\r\n  Click here to get a customized welcome message \r\n  <button (click)=\"getWelcomeMessageWithParameter()\" class=\"btn btn-success\">Get Welcome Message</button>\r\n</div>\r\n\r\n<div class=\"container\" *ngIf=\"welcomeMessageFromService\">\r\n    <H2>Your Customized Welcome Message</H2>\r\n    {{welcomeMessageFromService}}\r\n  </div>"
+module.exports = "<H1>Welcome!</H1>\n\n<div class=\"container\">\n  Welcome {{name}}. You can manage your todos <a routerLink=\"/todos\">here</a>\n</div>\n\n<div class=\"container\">\n  Click here to get a customized welcome message \n  <button (click)=\"getWelcomeMessageWithParameter()\" class=\"btn btn-success\">Get Welcome Message</button>\n</div>\n\n<div class=\"container\" *ngIf=\"welcomeMessageFromService\">\n    <H2>Your Customized Welcome Message</H2>\n    {{welcomeMessageFromService}}\n  </div>\n\n  <!--The content below is only a placeholder and can be replaced.-->\n<div style=\"text-align:center\">\n    <h1>\n      Welcome to {{ title }}!\n    </h1>\n    <img width=\"300\" alt=\"Angular Logo\" src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==\">\n  </div>\n  <h2>Here are some links to help you start: </h2>\n  <ul>\n    <li><h2><a target=\"_blank\" rel=\"noopener\" href=\"https://angular.io/tutorial\">Tour of Heroes</a></h2></li>\n    <li><h2><a target=\"_blank\" rel=\"noopener\" href=\"https://angular.io/cli\">CLI Documentation</a></h2></li>\n    <li><h2><a target=\"_blank\" rel=\"noopener\" href=\"https://blog.angular.io/\">Angular blog</a></h2></li>\n  </ul>\n  "
 
 /***/ }),
 
@@ -1361,6 +1426,7 @@ var WelcomeComponent = /** @class */ (function () {
     function WelcomeComponent(route, service) {
         this.route = route;
         this.service = service;
+        this.title = 'Angular with Spring Boot';
         this.message = 'Some Welcome Message';
         this.name = '';
     }
@@ -1487,7 +1553,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\vivek_pathi\Desktop\git\ngboot\aglr-app\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /Users/vickispark/Desktop/GitRepo/ngboot/aglr-app/src/main.ts */"./src/main.ts");
 
 
 /***/ })
