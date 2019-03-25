@@ -1,3 +1,12 @@
+spring.profiles.active=test
+https://dzone.com/articles/spring-boot-profiles-1
+
+ng build --env=prod
+
+Point angular to prod/dev
+https://stackoverflow.com/questions/47426721/angular-cli-change-rest-api-url-on-build
+
+
 # infboot
 Angular SpringBoot Template
 

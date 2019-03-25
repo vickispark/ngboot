@@ -120,7 +120,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n\n<app-menu></app-menu>\n\n<div class=\"container\">\n    <router-outlet></router-outlet>\n</div>\n\n\n\n<!-- <app-car-list></app-car-list> -->\n\n<app-footer></app-footer>\n\n"
+module.exports = "\r\n\r\n<app-menu></app-menu>\r\n\r\n<div class=\"container\">\r\n    <router-outlet></router-outlet>\r\n</div>\r\n\r\n\r\n\r\n<!-- <app-car-list></app-car-list> -->\r\n\r\n<app-footer></app-footer>\r\n\r\n"
 
 /***/ }),
 
@@ -168,10 +168,10 @@ var AppComponent = /** @class */ (function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "API_URL", function() { return API_URL; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TODO_JPA_API_URL", function() { return TODO_JPA_API_URL; });
-//export const API_URL = "http://localhost:8080"
-//export const TODO_JPA_API_URL = "http://localhost:8080/jpa"
-var API_URL = "https://javanewproj.appspot.com";
-var TODO_JPA_API_URL = "https://javanewproj.appspot.com/jpa";
+/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../environments/environment */ "./src/environments/environment.ts");
+
+var API_URL = _environments_environment__WEBPACK_IMPORTED_MODULE_0__["environment"].API_URL; //GCP APPENGINE
+var TODO_JPA_API_URL = _environments_environment__WEBPACK_IMPORTED_MODULE_0__["environment"].TODO_JPA_API_URL; //GCP APPENGINE
 
 
 /***/ }),
@@ -281,7 +281,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "  <form #carForm=\"ngForm\" (ngSubmit)=\"save(carForm.value)\">\n      <h2>{{car.name ? 'Edit' : 'Add'}} Car</h2>\n      <input type=\"hidden\" name=\"href\" [(ngModel)]=\"car.href\">\n        <input  placeholder=\"Car Name\" [(ngModel)]=\"car.name\"\n               required name=\"name\" #name>\n      <button color=\"primary\" type=\"submit\"\n              [disabled]=\"!carForm.form.valid\">Save</button>\n      <button  color=\"secondary\" (click)=\"remove(car.href)\"\n              *ngIf=\"car.href\" type=\"button\">Delete</button>\n      <a routerLink=\"/car-list\">Cancel</a>\n      <!-- <div class=\"giphy\">\n        <img src=\"{{car.giphyUrl}}\" alt=\"{{car.name}}\">\n      </div> -->\n  </form>\n"
+module.exports = "  <form #carForm=\"ngForm\" (ngSubmit)=\"save(carForm.value)\">\r\n      <h2>{{car.name ? 'Edit' : 'Add'}} Car</h2>\r\n      <input type=\"hidden\" name=\"href\" [(ngModel)]=\"car.href\">\r\n        <input  placeholder=\"Car Name\" [(ngModel)]=\"car.name\"\r\n               required name=\"name\" #name>\r\n      <button color=\"primary\" type=\"submit\"\r\n              [disabled]=\"!carForm.form.valid\">Save</button>\r\n      <button  color=\"secondary\" (click)=\"remove(car.href)\"\r\n              *ngIf=\"car.href\" type=\"button\">Delete</button>\r\n      <a routerLink=\"/car-list\">Cancel</a>\r\n      <!-- <div class=\"giphy\">\r\n        <img src=\"{{car.giphyUrl}}\" alt=\"{{car.name}}\">\r\n      </div> -->\r\n  </form>\r\n"
 
 /***/ }),
 
@@ -386,7 +386,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h2>Car List</h2>\n\n      <div *ngFor=\"let car of cars\">\n        <h3>\n          <a [routerLink]=\"['/car-edit', car.id]\">{{car.name}}</a>\n        </h3>\n      </div>\n   \n  <button  [routerLink]=\"['/car-add']\">Add</button>\n"
+module.exports = "<h2>Car List</h2>\r\n\r\n      <div *ngFor=\"let car of cars\">\r\n        <h3>\r\n          <a [routerLink]=\"['/car-edit', car.id]\">{{car.name}}</a>\r\n        </h3>\r\n      </div>\r\n   \r\n  <button  [routerLink]=\"['/car-add']\">Add</button>\r\n"
 
 /***/ }),
 
@@ -495,7 +495,7 @@ var ErrorComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".footer {\n    position: relative;\n    bottom: 0;\n    width:100%;\nheight: 40px;\n    background-color: #222222;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZm9vdGVyL2Zvb3Rlci5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksa0JBQWtCO0lBQ2xCLFNBQVM7SUFDVCxVQUFVO0FBQ2QsWUFBWTtJQUNSLHlCQUF5QjtBQUM3QiIsImZpbGUiOiJzcmMvYXBwL2Zvb3Rlci9mb290ZXIuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5mb290ZXIge1xuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgICBib3R0b206IDA7XG4gICAgd2lkdGg6MTAwJTtcbmhlaWdodDogNDBweDtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjMjIyMjIyO1xufSJdfQ== */"
+module.exports = ".footer {\r\n    position: relative;\r\n    bottom: 0;\r\n    width:100%;\r\nheight: 40px;\r\n    background-color: #222222;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZm9vdGVyL2Zvb3Rlci5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksa0JBQWtCO0lBQ2xCLFNBQVM7SUFDVCxVQUFVO0FBQ2QsWUFBWTtJQUNSLHlCQUF5QjtBQUM3QiIsImZpbGUiOiJzcmMvYXBwL2Zvb3Rlci9mb290ZXIuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5mb290ZXIge1xyXG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xyXG4gICAgYm90dG9tOiAwO1xyXG4gICAgd2lkdGg6MTAwJTtcclxuaGVpZ2h0OiA0MHB4O1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogIzIyMjIyMjtcclxufSJdfQ== */"
 
 /***/ }),
 
@@ -506,7 +506,7 @@ module.exports = ".footer {\n    position: relative;\n    bottom: 0;\n    width:
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<footer class=\"footer\">\n    <div class=\"container\">\n        <span class=\"text-muted\">All Rights Reserved @Company</span>\n    </div>\n\n</footer>"
+module.exports = "<footer class=\"footer\">\r\n    <div class=\"container\">\r\n        <span class=\"text-muted\">All Rights Reserved @Company</span>\r\n    </div>\r\n\r\n</footer>"
 
 /***/ }),
 
@@ -562,7 +562,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h1> Todo </h1>\n\n<div class=\"alert alert-success\" *ngIf='message'>{{message}}</div>\n\n<div class=\"container\">\n  <table class=\"table\">\n    <thead>\n      <tr>\n        <th>Description</th>\n        <th>Target Date</th>\n        <th>is Completed?</th>\n        <th>Update</th>\n        <th>Delete</th>\n      </tr>\n    </thead>\n    <tbody>\n      <!--   for (Todo todo: todos) {  -->\n              <tr *ngFor=\"let todo of todos\">\n                <td>{{todo.description}}</td>\n                <td>{{todo.targetDate | date | uppercase}}</td>\n                <td>{{todo.done}}</td>\n                <td><button (click)=\"updateTodo(todo.id)\" class=\"btn btn-success\">Update</button></td>\n                <td><button (click)=\"deleteTodo(todo.id)\" class=\"btn btn-warning\">Delete</button></td>\n              </tr>\n      <!-- } -->\n    </tbody>\n\n  </table>\n\n  <div class=\"row\">\n      <button (click)=\"addTodo()\" class=\"btn btn-success\">Add</button>\n  </div>\n\n</div>"
+module.exports = "<h1> Todo </h1>\r\n\r\n<div class=\"alert alert-success\" *ngIf='message'>{{message}}</div>\r\n\r\n<div class=\"container\">\r\n  <table class=\"table\">\r\n    <thead>\r\n      <tr>\r\n        <th>Description</th>\r\n        <th>Target Date</th>\r\n        <th>is Completed?</th>\r\n        <th>Update</th>\r\n        <th>Delete</th>\r\n      </tr>\r\n    </thead>\r\n    <tbody>\r\n      <!--   for (Todo todo: todos) {  -->\r\n              <tr *ngFor=\"let todo of todos\">\r\n                <td>{{todo.description}}</td>\r\n                <td>{{todo.targetDate | date | uppercase}}</td>\r\n                <td>{{todo.done}}</td>\r\n                <td><button (click)=\"updateTodo(todo.id)\" class=\"btn btn-success\">Update</button></td>\r\n                <td><button (click)=\"deleteTodo(todo.id)\" class=\"btn btn-warning\">Delete</button></td>\r\n              </tr>\r\n      <!-- } -->\r\n    </tbody>\r\n\r\n  </table>\r\n\r\n  <div class=\"row\">\r\n      <button (click)=\"addTodo()\" class=\"btn btn-success\">Add</button>\r\n  </div>\r\n\r\n</div>"
 
 /***/ }),
 
@@ -672,7 +672,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<H1>Login!</H1>\n\n<div class=\"container\">\n  <div class=\"alert alert-warning\" *ngIf='invalidLogin'>{{errorMessage}}</div>\n\n  <div>\n    User Name : <input type=\"text\" name=\"username\" [(ngModel)]=\"username\">\n    Password  : <input type=\"password\" name=\"password\" [(ngModel)]=\"password\">\n\n    <!-- User Name : {{username}} -->\n\n    <!-- <button (click)=handleLogin() class=\"btn btn-success\">Login</button> -->\n    <!-- <button (click)=handleBasicAuthLogin() class=\"btn btn-success\">Login</button> -->\n    <button (click)=handleJWTAuthLogin() class=\"btn btn-success\">Login</button>\n    \n  </div>\n</div>"
+module.exports = "<H1>Login!</H1>\r\n\r\n<div class=\"container\">\r\n  <div class=\"alert alert-warning\" *ngIf='invalidLogin'>{{errorMessage}}</div>\r\n\r\n  <div>\r\n    User Name : <input type=\"text\" name=\"username\" [(ngModel)]=\"username\">\r\n    Password  : <input type=\"password\" name=\"password\" [(ngModel)]=\"password\">\r\n\r\n    <!-- User Name : {{username}} -->\r\n\r\n    <!-- <button (click)=handleLogin() class=\"btn btn-success\">Login</button> -->\r\n    <!-- <button (click)=handleBasicAuthLogin() class=\"btn btn-success\">Login</button> -->\r\n    <button (click)=handleJWTAuthLogin() class=\"btn btn-success\">Login</button>\r\n    \r\n  </div>\r\n</div>"
 
 /***/ }),
 
@@ -784,7 +784,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<H1>You are logged out</H1>\n<div class=\"container\">\n  Thank You For Using Our Application.\n</div>"
+module.exports = "<H1>You are logged out</H1>\r\n<div class=\"container\">\r\n  Thank You For Using Our Application.\r\n</div>"
 
 /***/ }),
 
@@ -844,7 +844,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<header>\n    <nav class=\"navbar navbar-expand-md navbar-dark bg-dark\">\n        <!--    <nav class=\"navbar navbar-inverse navbar-fixed-top\">-->\n       <!--    <div class=\"container\">  -->\n        <div><a href=\"/\" class=\"navbar-brand\">\n            ngBoot</a></div>\n          <!--<div class=\"navbar-header\"><a class=\"navbar-brand\" href=\"#\">V</a>\n            </div>-->  \n             \n           <!-- <div class=\"collapse navbar-collapse\"  id=\"myNavbar\">-->\n     <!--   <ul class=\"nav navbar-nav\">-->\n        <ul class=\"navbar-nav\">\n            <li><a *ngIf=\"hardcodedAuthenticationService.isUserLoggedIn()\" routerLink=\"/welcome/ngBoot\" class=\"nav-link\">Home</a></li>\n            <li><a *ngIf=\"hardcodedAuthenticationService.isUserLoggedIn()\" routerLink=\"/todos\" class=\"nav-link\">Todos</a></li>\n            <li><a *ngIf=\"hardcodedAuthenticationService.isUserLoggedIn()\" routerLink=\"/portfolio\" class=\"nav-link\">MyPortfolio</a></li>\n           \n        </ul>\n\n        <ul class=\"navbar-nav navbar-collapse justify-content-end\">\n                <li><a *ngIf=\"!hardcodedAuthenticationService.isUserLoggedIn()\" routerLink=\"/login\" class=\"nav-link\">Login</a></li>\n                <li><a *ngIf=\"hardcodedAuthenticationService.isUserLoggedIn()\" routerLink=\"/logout\" class=\"nav-link\">Logout</a></li>\n        </ul>\n          <!-- </div>-->\n    <!--</div>-->\n    </nav>\n\n    \n</header>\n\n\n       \n        \n\n"
+module.exports = "<header>\r\n    <nav class=\"navbar navbar-expand-md navbar-dark bg-dark\">\r\n        <!--    <nav class=\"navbar navbar-inverse navbar-fixed-top\">-->\r\n       <!--    <div class=\"container\">  -->\r\n        <div><a href=\"/\" class=\"navbar-brand\">\r\n            ngBoot</a></div>\r\n          <!--<div class=\"navbar-header\"><a class=\"navbar-brand\" href=\"#\">V</a>\r\n            </div>-->  \r\n             \r\n           <!-- <div class=\"collapse navbar-collapse\"  id=\"myNavbar\">-->\r\n     <!--   <ul class=\"nav navbar-nav\">-->\r\n        <ul class=\"navbar-nav\">\r\n            <li><a *ngIf=\"hardcodedAuthenticationService.isUserLoggedIn()\" routerLink=\"/welcome/ngBoot\" class=\"nav-link\">Home</a></li>\r\n            <li><a *ngIf=\"hardcodedAuthenticationService.isUserLoggedIn()\" routerLink=\"/todos\" class=\"nav-link\">Todos</a></li>\r\n            <li><a *ngIf=\"hardcodedAuthenticationService.isUserLoggedIn()\" routerLink=\"/portfolio\" class=\"nav-link\">MyPortfolio</a></li>\r\n           \r\n        </ul>\r\n\r\n        <ul class=\"navbar-nav navbar-collapse justify-content-end\">\r\n                <li><a *ngIf=\"!hardcodedAuthenticationService.isUserLoggedIn()\" routerLink=\"/login\" class=\"nav-link\">Login</a></li>\r\n                <li><a *ngIf=\"hardcodedAuthenticationService.isUserLoggedIn()\" routerLink=\"/logout\" class=\"nav-link\">Logout</a></li>\r\n        </ul>\r\n          <!-- </div>-->\r\n    <!--</div>-->\r\n    </nav>\r\n\r\n    \r\n</header>\r\n\r\n\r\n       \r\n        \r\n\r\n"
 
 /***/ }),
 
@@ -894,7 +894,7 @@ var MenuComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "body{\n    background-color:#FF0!important;\n    \n}\n.s1{\n    color:white;\n    background: url('https://cdn-images-1.medium.com/max/1200/1*tFbqYogOnqbRz1GT0uGzwg.png');\n  }\n.sec1{\n   background-color:#ddd; \n\n  }\n.i1{\n      border-radius:10px;\n\n  }\n.vertical-align {\n      display: flex;\n      flex-direction:column;\n    justify-content:center;\n     align-items: left;\n\n\n  }\n.row-eq-height{\n      display: flex;\n  }\n#section3 {padding-top:50px;height:500px;color: #fff; background-color: #673ab7;}\n#section4 {padding-top:50px;height:500px;color: #ffF; background-color: #0Ff;}\n.s1 {padding-top:0px;height:260px;color: #fff; background-color: #673ab7;}\n.bttns {\n    position: absolute;\n    bottom: 0;\n    right:10px;\n  }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcG9ydGZvbGlvL3BvcnRmb2xpby5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksK0JBQStCOztBQUVuQztBQUNBO0lBQ0ksV0FBVztJQUNYLHdGQUF3RjtFQUMxRjtBQUVBO0dBQ0MscUJBQXFCOztFQUV0QjtBQUNBO01BQ0ksa0JBQWtCOztFQUV0QjtBQUNBO01BQ0ksYUFBYTtNQUNiLHFCQUFxQjtJQUN2QixzQkFBc0I7S0FDckIsaUJBQWlCOzs7RUFHcEI7QUFFQTtNQUlJLGFBQWE7RUFDakI7QUFDRSxXQUFXLGdCQUFnQixDQUFDLFlBQVksQ0FBQyxXQUFXLEVBQUUseUJBQXlCLENBQUM7QUFDakYsV0FBVyxnQkFBZ0IsQ0FBQyxZQUFZLENBQUMsV0FBVyxFQUFFLHNCQUFzQixDQUFDO0FBRTdFLEtBQUssZUFBZSxDQUFDLFlBQVksQ0FBQyxXQUFXLEVBQUUseUJBQXlCLENBQUM7QUFDMUU7SUFDRSxrQkFBa0I7SUFDbEIsU0FBUztJQUNULFVBQVU7RUFDWiIsImZpbGUiOiJzcmMvYXBwL3BvcnRmb2xpby9wb3J0Zm9saW8uY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbImJvZHl7XG4gICAgYmFja2dyb3VuZC1jb2xvcjojRkYwIWltcG9ydGFudDtcbiAgICBcbn1cbi5zMXtcbiAgICBjb2xvcjp3aGl0ZTtcbiAgICBiYWNrZ3JvdW5kOiB1cmwoJ2h0dHBzOi8vY2RuLWltYWdlcy0xLm1lZGl1bS5jb20vbWF4LzEyMDAvMSp0RmJxWW9nT25xYlJ6MUdUMHVHendnLnBuZycpO1xuICB9XG5cbiAgLnNlYzF7XG4gICBiYWNrZ3JvdW5kLWNvbG9yOiNkZGQ7IFxuXG4gIH1cbiAgLmkxe1xuICAgICAgYm9yZGVyLXJhZGl1czoxMHB4O1xuXG4gIH1cbiAgLnZlcnRpY2FsLWFsaWduIHtcbiAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICBmbGV4LWRpcmVjdGlvbjpjb2x1bW47XG4gICAganVzdGlmeS1jb250ZW50OmNlbnRlcjtcbiAgICAgYWxpZ24taXRlbXM6IGxlZnQ7XG5cblxuICB9XG5cbiAgLnJvdy1lcS1oZWlnaHR7XG4gICAgICBkaXNwbGF5OiAtd2Via2l0LWJveDtcbiAgICAgIGRpc3BsYXk6IC13ZWJraXQtZmxleDtcbiAgICAgIGRpc3BsYXk6IC1tcy1mbGV4Ym94O1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgfVxuICAgICNzZWN0aW9uMyB7cGFkZGluZy10b3A6NTBweDtoZWlnaHQ6NTAwcHg7Y29sb3I6ICNmZmY7IGJhY2tncm91bmQtY29sb3I6ICM2NzNhYjc7fVxuICAgI3NlY3Rpb240IHtwYWRkaW5nLXRvcDo1MHB4O2hlaWdodDo1MDBweDtjb2xvcjogI2ZmRjsgYmFja2dyb3VuZC1jb2xvcjogIzBGZjt9XG5cbiAgIC5zMSB7cGFkZGluZy10b3A6MHB4O2hlaWdodDoyNjBweDtjb2xvcjogI2ZmZjsgYmFja2dyb3VuZC1jb2xvcjogIzY3M2FiNzt9XG4gIC5idHRucyB7XG4gICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgIGJvdHRvbTogMDtcbiAgICByaWdodDoxMHB4O1xuICB9XG4iXX0= */"
+module.exports = "body{\r\n    background-color:#FF0!important;\r\n    \r\n}\r\n.s1{\r\n    color:white;\r\n    background: url('https://cdn-images-1.medium.com/max/1200/1*tFbqYogOnqbRz1GT0uGzwg.png');\r\n  }\r\n.sec1{\r\n   background-color:#ddd; \r\n\r\n  }\r\n.i1{\r\n      border-radius:10px;\r\n\r\n  }\r\n.vertical-align {\r\n      display: flex;\r\n      flex-direction:column;\r\n    justify-content:center;\r\n     align-items: left;\r\n\r\n\r\n  }\r\n.row-eq-height{\r\n      display: flex;\r\n  }\r\n#section3 {padding-top:50px;height:500px;color: #fff; background-color: #673ab7;}\r\n#section4 {padding-top:50px;height:500px;color: #ffF; background-color: #0Ff;}\r\n.s1 {padding-top:0px;height:260px;color: #fff; background-color: #673ab7;}\r\n.bttns {\r\n    position: absolute;\r\n    bottom: 0;\r\n    right:10px;\r\n  }\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcG9ydGZvbGlvL3BvcnRmb2xpby5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksK0JBQStCOztBQUVuQztBQUNBO0lBQ0ksV0FBVztJQUNYLHdGQUF3RjtFQUMxRjtBQUVBO0dBQ0MscUJBQXFCOztFQUV0QjtBQUNBO01BQ0ksa0JBQWtCOztFQUV0QjtBQUNBO01BQ0ksYUFBYTtNQUNiLHFCQUFxQjtJQUN2QixzQkFBc0I7S0FDckIsaUJBQWlCOzs7RUFHcEI7QUFFQTtNQUlJLGFBQWE7RUFDakI7QUFDRSxXQUFXLGdCQUFnQixDQUFDLFlBQVksQ0FBQyxXQUFXLEVBQUUseUJBQXlCLENBQUM7QUFDakYsV0FBVyxnQkFBZ0IsQ0FBQyxZQUFZLENBQUMsV0FBVyxFQUFFLHNCQUFzQixDQUFDO0FBRTdFLEtBQUssZUFBZSxDQUFDLFlBQVksQ0FBQyxXQUFXLEVBQUUseUJBQXlCLENBQUM7QUFDMUU7SUFDRSxrQkFBa0I7SUFDbEIsU0FBUztJQUNULFVBQVU7RUFDWiIsImZpbGUiOiJzcmMvYXBwL3BvcnRmb2xpby9wb3J0Zm9saW8uY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbImJvZHl7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiNGRjAhaW1wb3J0YW50O1xyXG4gICAgXHJcbn1cclxuLnMxe1xyXG4gICAgY29sb3I6d2hpdGU7XHJcbiAgICBiYWNrZ3JvdW5kOiB1cmwoJ2h0dHBzOi8vY2RuLWltYWdlcy0xLm1lZGl1bS5jb20vbWF4LzEyMDAvMSp0RmJxWW9nT25xYlJ6MUdUMHVHendnLnBuZycpO1xyXG4gIH1cclxuXHJcbiAgLnNlYzF7XHJcbiAgIGJhY2tncm91bmQtY29sb3I6I2RkZDsgXHJcblxyXG4gIH1cclxuICAuaTF7XHJcbiAgICAgIGJvcmRlci1yYWRpdXM6MTBweDtcclxuXHJcbiAgfVxyXG4gIC52ZXJ0aWNhbC1hbGlnbiB7XHJcbiAgICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICAgIGZsZXgtZGlyZWN0aW9uOmNvbHVtbjtcclxuICAgIGp1c3RpZnktY29udGVudDpjZW50ZXI7XHJcbiAgICAgYWxpZ24taXRlbXM6IGxlZnQ7XHJcblxyXG5cclxuICB9XHJcblxyXG4gIC5yb3ctZXEtaGVpZ2h0e1xyXG4gICAgICBkaXNwbGF5OiAtd2Via2l0LWJveDtcclxuICAgICAgZGlzcGxheTogLXdlYmtpdC1mbGV4O1xyXG4gICAgICBkaXNwbGF5OiAtbXMtZmxleGJveDtcclxuICAgICAgZGlzcGxheTogZmxleDtcclxuICB9XHJcbiAgICAjc2VjdGlvbjMge3BhZGRpbmctdG9wOjUwcHg7aGVpZ2h0OjUwMHB4O2NvbG9yOiAjZmZmOyBiYWNrZ3JvdW5kLWNvbG9yOiAjNjczYWI3O31cclxuICAgI3NlY3Rpb240IHtwYWRkaW5nLXRvcDo1MHB4O2hlaWdodDo1MDBweDtjb2xvcjogI2ZmRjsgYmFja2dyb3VuZC1jb2xvcjogIzBGZjt9XHJcblxyXG4gICAuczEge3BhZGRpbmctdG9wOjBweDtoZWlnaHQ6MjYwcHg7Y29sb3I6ICNmZmY7IGJhY2tncm91bmQtY29sb3I6ICM2NzNhYjc7fVxyXG4gIC5idHRucyB7XHJcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgICBib3R0b206IDA7XHJcbiAgICByaWdodDoxMHB4O1xyXG4gIH1cclxuIl19 */"
 
 /***/ }),
 
@@ -1095,6 +1095,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _app_constants__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../app.constants */ "./src/app/app.constants.ts");
+
 
 
 
@@ -1110,7 +1112,7 @@ var WelcomeDataService = /** @class */ (function () {
         this.http = http;
     }
     WelcomeDataService.prototype.executeHelloWorldBeanService = function () {
-        return this.http.get('http://localhost:8080/hello-world-bean');
+        return this.http.get(_app_constants__WEBPACK_IMPORTED_MODULE_3__["API_URL"] + "/hello-world-bean"); //'http://localhost:8080/'
         //console.log("Execute Hello World Bean Service")
     };
     //http://localhost:8080/hello-world/path-variable/in28minutes
@@ -1119,7 +1121,7 @@ var WelcomeDataService = /** @class */ (function () {
         // let headers = new HttpHeaders({
         //     Authorization: basicAuthHeaderString
         //   })
-        return this.http.get("http://localhost:8080/hello-world/path-variable/" + name);
+        return this.http.get(_app_constants__WEBPACK_IMPORTED_MODULE_3__["API_URL"] + "/hello-world/path-variable/" + name);
         //console.log("Execute Hello World Bean Service")
     };
     WelcomeDataService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
@@ -1239,6 +1241,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _app_constants__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../app.constants */ "./src/app/app.constants.ts");
+
 
 
 
@@ -1246,7 +1250,7 @@ var CarService = /** @class */ (function () {
     function CarService(http) {
         this.http = http;
         //public API = '//localhost:8080';
-        this.API = '//javanewproj.appspot.com';
+        this.API = _app_constants__WEBPACK_IMPORTED_MODULE_3__["API_URL"]; // '//javanewproj.appspot.com';//GCP APPENGINE
         this.CAR_API = this.API + '/cars';
     }
     CarService.prototype.getAll = function () {
@@ -1288,7 +1292,7 @@ var CarService = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".ng-invalid:not(form) {\n    border-left: 5px solid red;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvdG9kby90b2RvLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSwwQkFBMEI7QUFDOUIiLCJmaWxlIjoic3JjL2FwcC90b2RvL3RvZG8uY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5uZy1pbnZhbGlkOm5vdChmb3JtKSB7XG4gICAgYm9yZGVyLWxlZnQ6IDVweCBzb2xpZCByZWQ7XG59Il19 */"
+module.exports = ".ng-invalid:not(form) {\r\n    border-left: 5px solid red;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvdG9kby90b2RvLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSwwQkFBMEI7QUFDOUIiLCJmaWxlIjoic3JjL2FwcC90b2RvL3RvZG8uY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5uZy1pbnZhbGlkOm5vdChmb3JtKSB7XHJcbiAgICBib3JkZXItbGVmdDogNXB4IHNvbGlkIHJlZDtcclxufSJdfQ== */"
 
 /***/ }),
 
@@ -1299,7 +1303,7 @@ module.exports = ".ng-invalid:not(form) {\n    border-left: 5px solid red;\n}\n/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<H1>Todo</H1>\n\n<div class=\"container\">\n  <div class=\"alert alert-warning\" *ngIf=\"todoForm.dirty && todoForm.invalid\">Enter valid values</div>\n  <div class=\"alert alert-warning\" *ngIf=\"todoForm.dirty && targetDate.invalid\">Enter valid Target Date</div>\n  <div class=\"alert alert-warning\" *ngIf=\"todoForm.dirty && description.invalid\">Enter atleast 5 characters in Description</div>\n  \n  <form (ngSubmit)=\"!todoForm.invalid && saveTodo()\" #todoForm=\"ngForm\">\n    <fieldset class=\"form-group\">\n      <label>Description</label>\n      <input type=\"text\" #description=\"ngModel\" \n            [(ngModel)]=\"todo.description\" class=\"form-control\" \n                name=\"description\" required=\"required\" minlength=\"5\">\n    </fieldset>\n\n    <fieldset class=\"form-group\">\n        <label>Target Date</label>\n        <input type=\"date\" #targetDate=\"ngModel\"\n        [ngModel]=\"todo.targetDate | date:'yyyy-MM-dd' \"\n        (ngModelChange)=\"todo.targetDate = $event\"\n        class=\"form-control\" name=\"targetDate\" required=\"required\" >\n    </fieldset>\n\n    <button type=\"submit\" class=\"btn btn-success\">Save</button>\n  </form>  \n</div>"
+module.exports = "<H1>Todo</H1>\r\n\r\n<div class=\"container\">\r\n  <div class=\"alert alert-warning\" *ngIf=\"todoForm.dirty && todoForm.invalid\">Enter valid values</div>\r\n  <div class=\"alert alert-warning\" *ngIf=\"todoForm.dirty && targetDate.invalid\">Enter valid Target Date</div>\r\n  <div class=\"alert alert-warning\" *ngIf=\"todoForm.dirty && description.invalid\">Enter atleast 5 characters in Description</div>\r\n  \r\n  <form (ngSubmit)=\"!todoForm.invalid && saveTodo()\" #todoForm=\"ngForm\">\r\n    <fieldset class=\"form-group\">\r\n      <label>Description</label>\r\n      <input type=\"text\" #description=\"ngModel\" \r\n            [(ngModel)]=\"todo.description\" class=\"form-control\" \r\n                name=\"description\" required=\"required\" minlength=\"5\">\r\n    </fieldset>\r\n\r\n    <fieldset class=\"form-group\">\r\n        <label>Target Date</label>\r\n        <input type=\"date\" #targetDate=\"ngModel\"\r\n        [ngModel]=\"todo.targetDate | date:'yyyy-MM-dd' \"\r\n        (ngModelChange)=\"todo.targetDate = $event\"\r\n        class=\"form-control\" name=\"targetDate\" required=\"required\" >\r\n    </fieldset>\r\n\r\n    <button type=\"submit\" class=\"btn btn-success\">Save</button>\r\n  </form>  \r\n</div>"
 
 /***/ }),
 
@@ -1390,7 +1394,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<H1>Welcome!</H1>\n\n<div class=\"container\">\n  Welcome {{name}}. You can manage your todos <a routerLink=\"/todos\">here</a>\n</div>\n\n<div class=\"container\">\n  Click here to get a customized welcome message \n  <button (click)=\"getWelcomeMessageWithParameter()\" class=\"btn btn-success\">Get Welcome Message</button>\n</div>\n\n<div class=\"container\" *ngIf=\"welcomeMessageFromService\">\n    <H2>Your Customized Welcome Message</H2>\n    {{welcomeMessageFromService}}\n  </div>\n\n  <!--The content below is only a placeholder and can be replaced.-->\n<div style=\"text-align:center\">\n    <h1>\n      Welcome to {{ title }}!\n    </h1>\n    <img width=\"300\" alt=\"Angular Logo\" src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==\">\n  </div>\n  <h2>Here are some links to help you start: </h2>\n  <ul>\n    <li><h2><a target=\"_blank\" rel=\"noopener\" href=\"https://angular.io/tutorial\">Tour of Heroes</a></h2></li>\n    <li><h2><a target=\"_blank\" rel=\"noopener\" href=\"https://angular.io/cli\">CLI Documentation</a></h2></li>\n    <li><h2><a target=\"_blank\" rel=\"noopener\" href=\"https://blog.angular.io/\">Angular blog</a></h2></li>\n  </ul>\n  "
+module.exports = "<H1>Welcome!</H1>\r\n\r\n<div class=\"container\">\r\n  Welcome {{name}}. You can manage your todos <a routerLink=\"/todos\">here</a>\r\n</div>\r\n\r\n<div class=\"container\">\r\n  Click here to get a customized welcome message \r\n  <button (click)=\"getWelcomeMessageWithParameter()\" class=\"btn btn-success\">Get Welcome Message</button>\r\n</div>\r\n\r\n<div class=\"container\" *ngIf=\"welcomeMessageFromService\">\r\n    <H2>Your Customized Welcome Message</H2>\r\n    {{welcomeMessageFromService}}\r\n  </div>\r\n\r\n  <!--The content below is only a placeholder and can be replaced.-->\r\n<div style=\"text-align:center\">\r\n    <h1>\r\n      Welcome to {{ title }}!\r\n    </h1>\r\n    <img width=\"300\" alt=\"Angular Logo\" src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==\">\r\n  </div>\r\n  <h2>Here are some links to help you start: </h2>\r\n  <ul>\r\n    <li><h2><a target=\"_blank\" rel=\"noopener\" href=\"https://angular.io/tutorial\">Tour of Heroes</a></h2></li>\r\n    <li><h2><a target=\"_blank\" rel=\"noopener\" href=\"https://angular.io/cli\">CLI Documentation</a></h2></li>\r\n    <li><h2><a target=\"_blank\" rel=\"noopener\" href=\"https://blog.angular.io/\">Angular blog</a></h2></li>\r\n  </ul>\r\n  "
 
 /***/ }),
 
@@ -1506,7 +1510,9 @@ __webpack_require__.r(__webpack_exports__);
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 var environment = {
-    production: false
+    production: false,
+    API_URL: 'http://localhost:8080',
+    TODO_JPA_API_URL: "http://localhost:8080/jpa",
 };
 /*
  * For easier debugging in development mode, you can import the following file
@@ -1553,7 +1559,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/vickispark/Desktop/GitRepo/ngboot/aglr-app/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! C:\Users\vivek_pathi\Desktop\git\ngboot\aglr-app\src\main.ts */"./src/main.ts");
 
 
 /***/ })
