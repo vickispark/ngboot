@@ -49,6 +49,13 @@ public class RegistrationController {
 	         }
 		return "success";
 	    }
+	
+	  @RequestMapping(value = "/register/custom" , method = RequestMethod.GET)
+	  //http://localhost:8080/register/custom?firstName=vic
+	    public List<UserEntity> getFiltered(String firstName) {
+	        return registrationService.getFirstNamesLike(firstName);
+	    }
+
 //	public ModelAndView addCustomer(@Valid @ModelAttribute("command") User user, BindingResult result,
 //			ModelMap model) {
 //		ModelAndView modelAndView = new ModelAndView();

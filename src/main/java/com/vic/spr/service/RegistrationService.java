@@ -38,4 +38,10 @@ public class RegistrationService {
 			 return usr;//response as json
 			  }
 
+	public List<UserEntity> getFirstNamesLike(String firstName) {
+		// TODO Auto-generated method stub
+		return userRepository.getFirstNamesLike(firstName);
+    
+	}
+
 }
