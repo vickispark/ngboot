@@ -1,5 +1,5 @@
-//export const API_URL = "http://localhost:8080"
-//export const TODO_JPA_API_URL = "http://localhost:8080/jpa"
 
-export const API_URL = "https://javanewproj.appspot.com"//GCP APPENGINE
-export const TODO_JPA_API_URL = "https://javanewproj.appspot.com/jpa"//GCP APPENGINE
+import { environment } from '../environments/environment';
+
+export const API_URL = environment.API_URL;//GCP APPENGINE
+export const TODO_JPA_API_URL = environment.TODO_JPA_API_URL;//GCP APPENGINE

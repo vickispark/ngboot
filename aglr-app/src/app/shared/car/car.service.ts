@@ -2,13 +2,16 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
+import { API_URL } from '../../app.constants';
+
+
 @Injectable({providedIn: 'root'})//when you annotated a class with @Injectable(), you had to register it as a provider in a module or component to use it. 
 //In Angular 6+, you can specify providedIn and it will auto-register itself when the app bootstraps.
 export class CarService {
   //public API = '//localhost:8080';
-  public API = '//javanewproj.appspot.com';//GCP APPENGINE
+  public API = API_URL;// '//javanewproj.appspot.com';//GCP APPENGINE
   public CAR_API = this.API + '/cars';
-
+  
   constructor(private http: HttpClient) {
   }
 
