@@ -1,3 +1,5 @@
+ ng g component registerUser
+
 spring.profiles.active=test
 https://dzone.com/articles/spring-boot-profiles-1
 

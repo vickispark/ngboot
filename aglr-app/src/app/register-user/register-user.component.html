@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>NGBOOT</title>
+
+
+	<!--<link rel="stylesheet" href="<c:url value='css/newstyle.css'/>"
+	type="text/css" media="all">-->
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" 
+	rel="stylesheet" type="text/css">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	
+	<!-- <link rel="stylesheet" href="<c:url value='css/custom.css'/>"
+	type="text/css" media="all">-->
+	
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+
+<body>
+
+<h1>REGISTER USER</h1>
+<section id="slider" class="margintop-10">
+  <div id="home-carousel" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="item active" style="background-image: url('assets/imgs/382266112.jpg')">
+        <br><br>
+        <div class="container">
+          <div class="col-sm-6">
+              <p class="head " style="color:white">Connecting flight</p>
+              <p class="carousel-content  " style="color:white">Taking more than one flight to
+                get to your final destination? At NG, we make connecting
+                flights much easier!</p>
+          </div>
+        </div>					
+      </div> 
+      <div class="item" style="background-image: url('assets/imgs/586266182.jpg')">
+        <br><br>
+        <div class="container">
+          <div class="col-sm-6">
+              <p class="head " style="color:white">NG Meals onboard</p>
+              <p class="carousel-content " style="color:white">Tickle your taste buds and enjoy
+                sumptuous meals onboard!</p>
+          </div>
+        </div>					
+      </div> 
+    
+    <div class="item" style="background-image: url('assets/imgs/346909778.jpg')">
+        <br><br>
+        <div class="container">
+          <div class="col-sm-6">
+              <p class="head " style="color:white">Hospitality</p>
+              <p class="carousel-content " style="color:white">More convenience and comfort
+                with our hospitality and services!</p>
+          </div>
+        </div>					
+      </div> 
+      
+
+    </div>
+    <ol class="carousel-indicators">
+      <li data-target="#home-carousel" data-slide-to="0" class="active"></li>
+      <li data-target="#home-carousel" data-slide-to="1"></li>
+      <li data-target="#home-carousel" data-slide-to="2"></li>
+    </ol>
+  </div>
+  <!--/-carousel-->
+
+</section>
+<!-- /SLIDER -->
+
+	<!-- ABOUT US -->
+  <div class="row marginbottom-150">
+		<div class="container col-sm-offset-1 col-sm-5 col-left ">
+					<h1 class="capital">
+						<strong>About Us</strong>
+					</h1>
+					<span class="st-border"></span>
+					<div class="about-us ">
+						<br>
+						<p>
+              <b>Why NGBOOT?<br></b>
+              TEXT PARAGRAPH
+						</p>
+						<br>
+
+						<p>
+							<b>Booking Flights with NG<br></b> While booking flights
+							with InfyGo, you can expect the ultimate online booking
+							experience. With premium customer service, 24/7 dedicated
+							helpline for support, and over 5 million delighted customers,
+							InfyGo takes great pride in enabling user satisfaction.
+						</p>
+
+					</div>
+		</div>
+		
+  <!-- /ABOUT US -->
+  
+  <!--signup-->
+  <div class="container col-sm-5 col-right signup" style="width : 40%">
+		
+    <div class="panel panel-default">
+    
+      <div class="panel-heading">
+      <h4 class="capital">
+              Register 
+      </h4>
+      
+      </div>
+      <div class="panel-body">     
+     
+     <!--   <form:form method="POST" action="registerUser" commandName="command" >-->
+        <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">  
+            
+             
+        <div class="row">
+          <div class="form-group col-sm-offset-1 col-sm-4 text-right fontstyle" >
+            UserId
+               <span style="color: red">*</span>     
+            </div>
+            <div class="col-sm-6">
+                <input type="text" formControlName="userId" class="form-control">
+           <!--   <form:input path="userId"  />
+              <br> 
+              <form:errors path="userId" />-->
+            </div>
+            <br>
+          </div>
+          
+           <div class="row">
+          <div class="form-group col-sm-offset-1 col-sm-4 text-right fontstyle" >
+        
+            Password
+            <span style="color: red">*</span>
+            </div>
+            <div class="col-sm-6">
+                <input type="text" formControlName="password" class="form-control">
+            <!--  <form:password path="password" class="form-control" />
+              <br> 
+              <form:errors path="password" />-->
+            </div>
+            <br>
+          
+          </div>
+
+           <div class="row">
+            <div class="form-group col-sm-offset-1 col-sm-4 text-right fontstyle" >
+              Name
+                <span style="color: red">*</span>
+            </div>
+            <div class="col-sm-6">
+                <input type="text" formControlName="name" class="form-control">
+             <!--<form:input path="name" class="form-control" />
+              <br> 								<form:errors path="name" />--> 
+            </div>
+            <br>
+            
+
+    
+          </div>
+         
+       
+
+           <div class="row">
+          <div class="form-group col-sm-offset-1 col-sm-4 text-right fontstyle" >
+          
+            City
+            <span style="color: red">*</span>
+            </div>
+            <div class="col-sm-6">
+                <input type="text" formControlName="city" class="form-control">
+
+             <!-- <form:input path="city" class="form-control" />
+              <br> 
+              <form:errors path="city" />-->
+            </div>
+            <br>
+          </div>
+     
+
+           <div class="row">
+          <div class="form-group col-sm-offset-1 col-sm-4 text-right fontstyle" >
+        
+            Email
+            <span style="color: red">*</span>
+            </div>
+            <div class="col-sm-6">
+                <input type="text" formControlName="email" class="form-control">
+
+            <!--  <form:input path="email" class="form-control" />
+              <br> 
+              <form:errors path="email" />-->
+            </div>
+            <br>
+          
+          </div>
+           <div class="row">
+          <div class="form-group col-sm-offset-1 col-sm-4 text-right fontstyle" >
+          
+            PhoneNumber
+            <span style="color: red">*</span>
+          </div>
+            <div class="col-sm-6">
+                <input type="text" formControlName="phone" class="form-control">
+
+         <!--    <form:input path="phone" class="form-control" maxlength="10" />
+              <br> 
+              <form:errors path="phone" />-->
+            </div>
+            <br>
+          </div>
+        
+
+           <div class="row">
+          <div class="form-group col-sm-offset-1 col-sm-3 text-right fontstyle" >
+        
+          </div>
+            <div class="col-sm-6">
+                            <button class="btn btn-primary" type="submit" [disabled]="!profileForm.valid">Submit</button>
+
+            <!--  <input type="submit" class="btn btn-primary"
+                value="Register"/>-->
+            </div>
+            <div class="col-md-12 text-center">
+        <!--  <div class="text-center text-danger">${message}</div>  -->
+          </div></div>
+         
+          <br>
+     <!--     <c:if test="${successMessage ne null}">-->
+   <!--    <div class="alert alert-success col-md-12" align="center">${successMessage}
+      <br>
+      Click <a href="login" >
+                      &nbsp;here </a>to login.
+                </div>-->
+  <!--  </c:if>		-->
+</form>
+      <!--  </form:form>-->
+      <p>
+          Form Status: {{ profileForm.status }}
+        </p>
+      </div>
+    </div>
+    
+  </div>
+ 
+
+</div>
+<!-- /SIGNUP -->
+
+
+	<!--	<jsp:include page="footer.jsp"></jsp:include>-->
+</body>
+</html>

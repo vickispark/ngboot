@@ -20,7 +20,11 @@ import { FooterComponent } from './footer/footer.component';
 import { LogoutComponent } from './logout/logout.component';
 import { TodoComponent } from './todo/todo.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
+import { RegisterUserComponent } from './register-user/register-user.component';
 //todos
+
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -35,13 +39,15 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
     FooterComponent,
     LogoutComponent,
     TodoComponent,
-    PortfolioComponent//todos end
+    PortfolioComponent,
+    RegisterUserComponent//todos end
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
   //  {provide: HTTP_INTERCEPTORS, useClass: HttpIntercepterBasicAuthService, multi: true }
